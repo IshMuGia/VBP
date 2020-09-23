@@ -70,6 +70,7 @@
         <div class="my-4 my-xl-8 ">
             <div class="row">
                 <div class="col-md-5 ml-md-auto ml-xl-0 mr-xl-auto">
+                    
                     <!-- Title -->
                     <div class="border-bottom border-color-1 mb-6">
                         <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26">Register</h3>
@@ -89,87 +90,114 @@
                     <form class="js-validate" action="/register" method="post">
                         <div class="row">
                             <!-- Input -->
-                            <div class="col-sm-6 mb-6">
+                            <div class="col-sm-6 mb-3">
                                 <div class="js-form-message">
                                     <label class="form-label">
-                                        First name
-                                        <span class="text-danger">*</span>
+                                        Name
                                     </label>
 
-                                    <input type="text" class="form-control" name="fname" placeholder="First name"
-                                        aria-label="First name" required data-msg="Please enter your first name."
+                                    <input type="text" class="form-control" name="name" placeholder="Name"
+                                        aria-label="Name" required data-msg="Please enter your name."
                                         data-error-class="u-has-error" data-success-class="u-has-success">
                                 </div>
                             </div>
                             <!-- End Input -->
+<!-- Input -->
+<div class="col-sm-6 mb-3">
+    <div class="js-form-message">
+        <label class="form-label">
+            Phone number
+        </label>
 
+        <input type="number" class="form-control" name="phone" placeholder="Phone"
+            aria-label="Phone number" required data-msg="Please enter a valid phone number."
+            data-error-class="u-has-error" data-success-class="u-has-success">
+    </div>
+</div>
+<!-- End Input -->
+
+<div class="col-sm-12 mb-3">
+    <div class="js-form-message">
+        <label class="form-label">
+            Email address
+        </label>
+
+        <input type="email" class="form-control" name="email" placeholder="Email address"
+            aria-label="Email address" required
+            data-msg="Please enter a valid email address." data-error-class="u-has-error"
+            data-success-class="u-has-success">
+    </div>
+</div>
                             <!-- Input -->
-                            <div class="col-sm-6 mb-6">
+                            <div class="col-sm-6 mb-3">
                                 <div class="js-form-message">
                                     <label class="form-label">
-                                        Last name
-                                        <span class="text-danger">*</span>
+                                        Business name
                                     </label>
 
-                                    <input type="text" class="form-control" name="lname" placeholder="Last name"
-                                        aria-label="Last name" required data-msg="Please enter your last name."
+                                    <input type="text" class="form-control" name="lname" placeholder="Business name"
+                                        aria-label="Business name" required data-msg="Please enter your business name."
                                         data-error-class="u-has-error" data-success-class="u-has-success">
                                 </div>
                             </div>
                             <!-- End Input -->
+<!-- Input -->
+<div class="col-sm-6 mb-3">
+    <div class="js-form-message">
+        <label class="form-label">
+            Business role
+        </label>
 
-                            <!-- Input -->
-                            <div class="col-sm-6 mb-6">
-                                <div class="js-form-message">
-                                    <label class="form-label">
-                                        Email address
-                                        <span class="text-danger">*</span>
-                                    </label>
+        <input type="text" class="form-control" name="lname" placeholder="Business role"
+            aria-label="Business role" required data-msg="Please enter your business role."
+            data-error-class="u-has-error" data-success-class="u-has-success">
+    </div>
+</div>
+<!-- End Input -->
+<!-- Input -->
+<div class="col-sm-12 mb-3">
+    <div class="js-form-message">
+        <label class="form-label">
+            Business address
+        </label>
 
-                                    <input type="email" class="form-control" name="email" placeholder="Email address"
-                                        aria-label="Email address" required
-                                        data-msg="Please enter a valid email address." data-error-class="u-has-error"
-                                        data-success-class="u-has-success">
-                                </div>
-                            </div>
-                            <!-- End Input -->
+        <input type="text" class="form-control" name="lname" placeholder="Business address"
+            aria-label="Business address" required data-msg="Please enter your business address."
+            data-error-class="u-has-error" data-success-class="u-has-success">
+    </div>
+</div>
+<!-- End Input -->
 
-                            <!-- Input -->
-                            <div class="col-sm-6 mb-6">
-                                <div class="js-form-message">
-                                    <label class="form-label">
-                                        Phone Number
-                                        <span class="text-danger">*</span>
-                                    </label>
 
-                                    <input type="number" class="form-control" name="phone" placeholder="Phone"
-                                        aria-label="Phone number" required data-msg="Please enter a valid phone number."
-                                        data-error-class="u-has-error" data-success-class="u-has-success">
-                                </div>
-                            </div>
-                            <!-- End Input -->
-                        </div>
+                            
+                        
 
                         <!-- Form Group -->
+                        <div class="col-sm-6 mb-3">
+
                         <div class="js-form-message form-group">
-                            <label class="form-label" for="signinSrPasswordExample2">Password<span
-                                    class="text-danger">*</span></label>
+                            <label class="form-label" for="signinSrPasswordExample2">Password</label>
                             <input type="password" class="form-control" name="password" id="signupPassword"
                                 placeholder="Password" aria-label="Password" required
                                 data-msg="Your password is invalid. Please try again." data-error-class="u-has-error"
                                 data-success-class="u-has-success">
                         </div>
+                    </div>
+
                         <!-- End Form Group -->
 
                         <!-- Form Group -->
+                        <div class="col-sm-6 mb-3">
+
                         <div class="js-form-message form-group">
-                            <label class="form-label" for="signinSrConfirmPassword">Confirm password<span
-                                    class="text-danger">*</span></label>
+                            <label class="form-label" for="signinSrConfirmPassword">Confirm password</label>
                             <input type="password" class="form-control" name="confirmPassword"
                                 id="signupConfirmPassword" placeholder="Confirm password" aria-label="Confirm password"
                                 required data-msg="Password does not match the confirm password."
                                 data-error-class="u-has-error" data-success-class="u-has-success">
                         </div>
+                    </div>
+
                         <!-- End Form Group -->
 
                         <p class="text-gray-90 mb-4">Your personal data will be used to mail your experience
@@ -181,6 +209,7 @@
                                     class="btn btn-primary-dark-w px-5">Register</button>
                             </div>
                         </div>
+                    </div>
                         <!-- End Button -->
                     </form>
                 </div>
@@ -211,7 +240,6 @@
                         <!-- Form Group -->
                         <div class="js-form-message form-group">
                             <label class="form-label" for="signinSrEmailExample3">Email address
-                                <span class="text-danger">*</span>
                             </label>
                             <input type="email" class="form-control" name="email" id="signinSrEmailExample3"
                                 placeholder="Email address" aria-label="Email address" required
@@ -222,8 +250,7 @@
 
                         <!-- Form Group -->
                         <div class="js-form-message form-group">
-                            <label class="form-label" for="signinSrPasswordExample2">Password <span
-                                    class="text-danger">*</span></label>
+                            <label class="form-label" for="signinSrPasswordExample2">Password </label>
                             <input type="password" class="form-control" name="password" id="signinSrPasswordExample2"
                                 placeholder="Password" aria-label="Password" required
                                 data-msg="Your password is invalid. Please try again." data-error-class="u-has-error"
