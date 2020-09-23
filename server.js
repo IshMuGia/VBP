@@ -76,5 +76,5 @@ app.use('/login', require('./routes/login.js'))
 app.use('/search', require('./routes/search.js'))
 app.use('/review', require('./routes/review.js'))
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, console.log(`server started on port ${PORT}`));

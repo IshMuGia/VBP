@@ -1,0 +1,303 @@
+<!-- ========== HEADER ========== -->
+<header id="header" class="u-header u-header-left-aligned-nav">
+    <div class="u-header__section">
+
+        <!-- Logo and Menu -->
+        <div class="py-2 py-xl-2 bg-primary">
+            <div class="container my-0dot5 my-xl-0">
+                <div class="row align-items-center">
+                    <!-- Logo-offcanvas-menu -->
+                    <div class="col-auto">
+                        <!-- Nav -->
+                        <nav
+                            class="navbar navbar-expand u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
+                            <!-- Logo -->
+                            <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center"
+                                        href="/" aria-label="ElectronicX" margin-top="-100px">
+                                        <img src="https://drive.google.com/uc?export=view&id=1BWrTCBQdRObKqhRZb3naajvmYvnFoSUh"
+                                            alt="ElectronicX">
+                                    </a>
+                            <!-- End Logo -->
+                        </nav>
+                        <!-- End Nav -->
+                    </div>
+                    <!-- End Logo-offcanvas-menu -->
+
+                    <!-- Customer Care -->
+                    <div class="d-none d-xl-block ml-auto">
+                        <div class="d-flex">
+                            
+                                <div class="col-auto">
+                                    <i class="ec ec-mail text-gray-90 font-size-56"></i>
+                                </div>
+                                <div class="col pl-3">
+                                    <div class="font-size-13 ">Got questions? Mail us!</div>
+                                    <div><a href="mailto:elex.electronicx@gmail.com" class="text-black">elex.electronicx@gmail.com</a></div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <!-- End Customer Care -->
+                    <!-- Header Icons -->
+                    <div class="d-xl-none col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static">
+                        <div class="d-inline-flex">
+                            <ul class="d-flex list-unstyled mb-0 align-items-center">
+                                <li class="col"><a href="#" class="text-gray-90" data-toggle="tooltip"
+                                        data-placement="top" title="My Account"><i
+                                            class="font-size-22 ec ec-user"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Header Icons -->
+                </div>
+            </div>
+        </div>
+        <!-- End Logo and Menu -->
+
+        <!-- End Vertical-and-secondary-menu -->
+    </div>
+</header>
+<!-- ========== END HEADER ========== -->
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content" role="main">
+    <br>
+
+    <div class="container">
+        <div class="mb-4">
+            <h1 class="text-center">My Account</h1>
+        </div>
+        <div class="my-4 my-xl-8 ">
+            <div class="row">
+                <div class="col-md-5 ml-md-auto ml-xl-0 mr-xl-auto">
+                    <!-- Title -->
+                    <div class="border-bottom border-color-1 mb-6">
+                        <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26">Register</h3>
+                    </div>
+                    <p class="text-gray-90 mb-4">Create a new account today to reap the benefits of a personalized
+                        shopping experience.</p>
+                    <!-- End Title -->
+                    <% if (rec.msg1!="") {%>
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <strong><%=rec.msg1 %></strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+                    <!-- Contacts Form -->
+                    <form class="js-validate" action="/register" method="post">
+                        <div class="row">
+                            <!-- Input -->
+                            <div class="col-sm-6 mb-6">
+                                <div class="js-form-message">
+                                    <label class="form-label">
+                                        First name
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input type="text" class="form-control" name="fname" placeholder="First name"
+                                        aria-label="First name" required data-msg="Please enter your first name."
+                                        data-error-class="u-has-error" data-success-class="u-has-success">
+                                </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <!-- Input -->
+                            <div class="col-sm-6 mb-6">
+                                <div class="js-form-message">
+                                    <label class="form-label">
+                                        Last name
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input type="text" class="form-control" name="lname" placeholder="Last name"
+                                        aria-label="Last name" required data-msg="Please enter your last name."
+                                        data-error-class="u-has-error" data-success-class="u-has-success">
+                                </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <!-- Input -->
+                            <div class="col-sm-6 mb-6">
+                                <div class="js-form-message">
+                                    <label class="form-label">
+                                        Email address
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input type="email" class="form-control" name="email" placeholder="Email address"
+                                        aria-label="Email address" required
+                                        data-msg="Please enter a valid email address." data-error-class="u-has-error"
+                                        data-success-class="u-has-success">
+                                </div>
+                            </div>
+                            <!-- End Input -->
+
+                            <!-- Input -->
+                            <div class="col-sm-6 mb-6">
+                                <div class="js-form-message">
+                                    <label class="form-label">
+                                        Phone Number
+                                        <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input type="number" class="form-control" name="phone" placeholder="Phone"
+                                        aria-label="Phone number" required data-msg="Please enter a valid phone number."
+                                        data-error-class="u-has-error" data-success-class="u-has-success">
+                                </div>
+                            </div>
+                            <!-- End Input -->
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="form-label" for="signinSrPasswordExample2">Password<span
+                                    class="text-danger">*</span></label>
+                            <input type="password" class="form-control" name="password" id="signupPassword"
+                                placeholder="Password" aria-label="Password" required
+                                data-msg="Your password is invalid. Please try again." data-error-class="u-has-error"
+                                data-success-class="u-has-success">
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="form-label" for="signinSrConfirmPassword">Confirm password<span
+                                    class="text-danger">*</span></label>
+                            <input type="password" class="form-control" name="confirmPassword"
+                                id="signupConfirmPassword" placeholder="Confirm password" aria-label="Confirm password"
+                                required data-msg="Password does not match the confirm password."
+                                data-error-class="u-has-error" data-success-class="u-has-success">
+                        </div>
+                        <!-- End Form Group -->
+
+                        <p class="text-gray-90 mb-4">Your personal data will be used to mail your experience
+                            throughout this website and to manage your account.</p>
+                        <!-- Button -->
+                        <div class="mb-6">
+                            <div class="mb-3">
+                                <button type="submit" value="Submit"
+                                    class="btn btn-primary-dark-w px-5">Register</button>
+                            </div>
+                        </div>
+                        <!-- End Button -->
+                    </form>
+                </div>
+                <div class="col-md-1 d-none d-md-block">
+                    <div class="flex-content-center h-100">
+                        <div class="width-1 bg-1 h-100"></div>
+                        <div
+                            class="width-50 height-50 border border-color-1 rounded-circle flex-content-center font-italic bg-white position-absolute">
+                            or</div>
+                    </div>
+                </div>
+                <div class="col-md-5 ml-xl-auto mr-md-auto mr-xl-0 mb-8 mb-md-0">
+                    <!-- Title -->
+                    <div class="border-bottom border-color-1 mb-6">
+                        <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26">Login</h3>
+                    </div>
+                    <p class="text-gray-90 mb-4">Welcome back! Sign in to your account.</p>
+                    <!-- End Title -->
+                    <% if (rec.msg!="") {%>
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <strong><%=rec.msg %></strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <% } %>
+                    <form class="js-validate" novalidate="novalidate" action="/login" method="post">
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="form-label" for="signinSrEmailExample3">Email address
+                                <span class="text-danger">*</span>
+                            </label>
+                            <input type="email" class="form-control" name="email" id="signinSrEmailExample3"
+                                placeholder="Email address" aria-label="Email address" required
+                                data-msg="Please enter a valid email address." data-error-class="u-has-error"
+                                data-success-class="u-has-success">
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="js-form-message form-group">
+                            <label class="form-label" for="signinSrPasswordExample2">Password <span
+                                    class="text-danger">*</span></label>
+                            <input type="password" class="form-control" name="password" id="signinSrPasswordExample2"
+                                placeholder="Password" aria-label="Password" required
+                                data-msg="Your password is invalid. Please try again." data-error-class="u-has-error"
+                                data-success-class="u-has-success">
+                        </div>
+                        <!-- End Form Group -->
+
+                        <!-- Button -->
+                        <div class="mb-1">
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary-dark-w px-5">Login</button>
+                            </div>
+                            
+                        </div>
+                        <!-- End Button -->
+                    </form>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+<!-- ========== END MAIN CONTENT ========== -->
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <!-- Footer-bottom-widgets -->
+    <div class="pt-8 pb-4 bg-primary">
+        <div class="container mt-1">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="mb-6">
+                        <a href="#" class="d-inline-block">
+                            <img src="https://drive.google.com/uc?export=view&id=1BWrTCBQdRObKqhRZb3naajvmYvnFoSUh"
+                                alt="ElectronicX" height="100">
+                        </a>
+                    </div>
+                    <div class="mb-4">
+                        <div class="row no-gutters">
+                            <div class="col-auto">
+                                <i class="ec ec-mail text-gray-90 font-size-56"></i>
+                            </div>
+                            <div class="col pl-3">
+                                <div class="font-size-13 ">Got questions? Mail us!</div>
+                                <div><a href="mailto:elex.electronicx@gmail.com" class="text-black">elex.electronicx@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Footer-bottom-widgets -->
+    <!-- Footer-copy-right -->
+    <div class="bg-gray-14 py-2">
+        <div class="container">
+            <div class="flex-center-between d-block d-md-flex">
+                <div class="mb-3 mb-md-0">This site is for educational purpose only</div>
+                <div class="text-md-right">
+                    © Ishmeet Kaur, Mushira Shaikh & Gianna Drego
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer-copy-right -->
+</footer>
+<!-- ========== END FOOTER ========== -->
+
+<!-- Go to Top -->
+<a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed"
+    data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp" data-hide-effect="slideOutDown">
+    <span class="fas fa-arrow-up u-go-to__inner"></span>
+</a>
+<!-- End Go to Top -->
