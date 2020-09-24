@@ -446,6 +446,11 @@ router.get("/checkout", (req, res) => {
     res.render("checkout");
 });
 
+router.get("/charts", (req, res) => {
+    // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
+    res.render("charts");
+});
+
 router.get("/cart", (req, res) => {
     // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
     res.render("cart");
