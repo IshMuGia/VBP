@@ -6,14 +6,13 @@ const UserSchema = new mongoose.Schema({
         required: true
 
     },
-
-    fname: {
+    name: {
         type: String,
         required: true
 
     },
-    lname: {
-        type: String,
+    phone: {
+        type: Number,
         required: true
 
     },
@@ -27,7 +26,7 @@ const UserSchema = new mongoose.Schema({
         required: true
 
     },
-    phone: {
+    biz_name: {
         type: Number,
         required: true
 
@@ -35,6 +34,15 @@ const UserSchema = new mongoose.Schema({
     timestamp: { 
         type: Date, 
         default: Date.now
+    },
+    biz_add: {
+        type: String,
+        required: true
+
+    },
+    biz_role: {
+        type: String,
+        required: true
     }
 });
 
