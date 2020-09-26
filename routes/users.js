@@ -10,11 +10,13 @@ const User = require('../models/Users');
 
 //Register handle
 router.post("/", (req, res) => {
-    var fname = req.body.fname
-    var lname = req.body.lname
-    var email = req.body.email
-    var password = req.body.password
+    var name = req.body.name
     var phone = req.body.phone
+    var email = req.body.email
+    var bname = req.body.b_name
+    var b_role = req.body.b_role
+    var b_add = req.body.b_add    
+    var password = req.body.password
     //console.log(req.body);
     User.findOne({ email: req.body.email })
         .then(user => {
@@ -31,11 +33,13 @@ router.post("/", (req, res) => {
 
                 const newUser = new User({
                     _id: new mongoose.Types.ObjectId(),
-                    fname: fname,
-                    lname: lname,
+                    name: name,
+                    phone: phone,
                     email: email,
-                    password: password,
-                    phone: phone
+                    biz_name: bname,
+                    biz_role: b_role,
+                    biz_add: b_add,
+                    password: password
                 });
                 //console.log(newUser)
                     //hash password
