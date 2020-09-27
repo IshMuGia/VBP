@@ -2,11 +2,9 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
-const passport = require('passport');
 const Act = require('../models/ActivityLog');
 // Load User model
 const User = require('../models/Users');
-//const { forwardAuthenticated } = require('../config/auth');
 
 //Register handle
 router.post("/", (req, res) => {
@@ -17,7 +15,6 @@ router.post("/", (req, res) => {
     var b_role = req.body.b_role
     var b_add = req.body.b_add    
     var password = req.body.password
-    //console.log(req.body);
     User.findOne({ email: req.body.email })
         .then(user => {
             if (user) {
@@ -56,8 +53,8 @@ router.post("/", (req, res) => {
                                 req.session.password = req.body.password
                                 req.session.uid = user._id;
                                 //console.log(re)
-                                const m = "Save Product";
-                                req.session.alert = m
+                                // const m = "Save Product";
+                                // req.session.alert = m
                                 var currentDate = new Date();
                                 req.session.logdate = currentDate;
                                 console.log(req.session.uid);
@@ -69,7 +66,7 @@ router.post("/", (req, res) => {
                                     .save()
                                     .then(r => {
                                         //console.log(user._id)
-                                        return res.redirect('/?uid=' + req.session.uid);
+                                        return res.redirect('/charts');
                                     });
                             })
                     });

@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema({
 
     },
     biz_name: {
-        type: Number,
+        type: String,
         required: true
 
     },

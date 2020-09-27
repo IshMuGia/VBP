@@ -9,7 +9,7 @@ const ActSchema = new mongoose.Schema({
         type: Date
     },
     duration: {
-        type: String
+        type: Number
     },
     logout: {
         type: Date
