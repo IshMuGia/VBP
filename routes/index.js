@@ -74,25 +74,12 @@ router.get("/myaccount", (req, res) => {
 });
 
 router.get('/logout', (req, res) => {
-    var currentDate = new Date();
+    const currentDate = new Date();
     const lin = new Date(req.session.logdate);
     console.log("login " + lin + " Logout " + currentDate)
-    var delta = Math.abs(currentDate - lin) / 1000
-    var days = Math.floor(delta / 86400);
-    delta -= days * 86400;
 
-    // calculate (and subtract) whole hours
-    var hours = Math.floor(delta / 3600) % 24;
-    delta -= hours * 3600;
-
-    // calculate (and subtract) whole minutes
-    var minutes = Math.floor(delta / 60) % 60;
-    delta -= minutes * 60;
-
-    // what's left is seconds
-    var seconds = Math.round(delta % 60);
-    const duration = days + "days:" + hours + "Hrs:" + minutes + "mins:" + seconds + "secs"
-    
+    duration= (Math.abs(currentDate.getTime() - lin.getTime()))/1000;
+    //console.log(timeDifference);        
     var myquery = {
         email: req.session.email
     };
@@ -554,4 +541,19 @@ router.get("/checkout", (req, res) => {
 //         });
 // });
 
+// var delta = Math.abs(currentDate - lin) / 1000
+//     var days = Math.floor(delta / 86400);
+//     delta -= days * 86400;
+
+//     // calculate (and subtract) whole hours
+//     var hours = Math.floor(delta / 3600) % 24;
+//     delta -= hours * 3600;
+
+//     // calculate (and subtract) whole minutes
+//     var minutes = Math.floor(delta / 60) % 60;
+//     delta -= minutes * 60;
+
+//     // what's left is seconds
+//     var seconds = Math.round(delta % 60);
+//     const duration = days + "days:" + hours + "Hrs:" + minutes + "mins:" + seconds + "secs"
 module.exports = router;

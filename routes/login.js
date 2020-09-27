@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
-const passport = require('passport');
 // Load User model
 const User = require('../models/Users');
 const Act = require('../models/ActivityLog');
@@ -40,11 +38,11 @@ router.post("/", (req, res) => {
                     req.session.email = email
                     req.session.password = password
                     req.session.uid = user._id;
-                    const m = "Save Product";
-                    req.session.alert = m
+                    //const m = "Save Product";
+                    //req.session.alert = m
                     var currentDate = new Date();
                     req.session.logdate = currentDate;
-                    console.log(req.session.logdate);
+                    //console.log(req.session.logdate);
                     console.log("Login success");
                     const newLog = new Act({
                         email: req.session.email,
@@ -54,7 +52,7 @@ router.post("/", (req, res) => {
                         .save()
                         .then(r => {
                             console.log(user._id)
-                            return res.redirect('/?uid=' + user._id);
+                            return res.redirect('/charts');
                         })
                         //return res.redirect('/?uid=' + r._id);
 
