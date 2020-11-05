@@ -45,7 +45,7 @@
 
 
                                     <li class="col"><a href="/wishlist/?email=<%=email%>" class="text-gray-90"
-                                            data-toggle="tooltip" data-placement="top" title="Saved"><i
+                                            data-toggle="tooltip" data-placement="top" title="Bookmarked"><i
                                                 class="font-size-18 fa fa-bookmark"></i></a></li>
                                     <li class="col"><a href="/logout" class="text-gray-90" data-toggle="tooltip"
                                             data-placement="top" title="Logout"><i
@@ -74,7 +74,35 @@
                 <!-- Content -->
                 <div class="js-scrollbar u-sidebar__body">
                     <div id="headerSidebarContent" class="u-sidebar__content u-header-sidebar__content">
+<br><br>
+<!-- Search Bar -->
+                         
+                                <form class="js-focus-state" action="/search" method="get">
+                                    <input class="form-control" name="email" type="hidden" id="email"
+                                        value="<%=email%>">
 
+                                    <label class="sr-only" for="searchproduct">Search</label>
+                                    <div class="input-group">
+                                        <select
+                                            class="form-control js-select selectpicker dropdown-select py-0 font-size-15"
+                                            data-live-search="true" name="word" id="word"
+                                            placeholder="Search for Products" required
+                                            data-style="form-control font-weight-normal border-color-primary border-right-0 height-40 border-width-2 rounded-left-pill border-primary">
+                                            <option value="">Search Solutions</option>
+                                           
+                                        </select>
+                                    
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="submit" id="searchProduct1">
+                                                <span class="ec ec-search font-size-24"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                           
+                        
+                            <!-- End Search Bar -->
+                            <br><br>
 
                         <!-- List -->
                         <ul id="headerSidebarList" class="u-header-collapse__nav">
@@ -218,13 +246,18 @@
 
             </div>
             <div class="col-8 bg-dark" style="overflow-x: hidden;">
-               <img class=" border border-dark" src="/img/999.jpeg" height="675 px">
+               <!-- <img class=" border border-dark" src="/img/999.jpeg" height="675 px"> -->
+               <iframe class="pt-3" width="1232" height="663"  src="https://www.youtube.com/embed/WA4dDs0T7sM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <h4><div class="float-left pt-2 pl-3"><a href="/wishlist/?email=<%=email%>"><i
+                class="fa fa-heart"></i> Rate us</a></div></h4>
+                <h4><div class="float-right "><a href="/wishlist/?email=<%=email%>"><i
+                class="fa fa-bookmark"></i> Bookmark it!</a></div><br></h4>
             </div>
             <div class="col bg-dark " id="main">
-                <h3 class="text-center text-warning">
+                <h3 class="text-center text-primary">
                     <br><b>
                         Overview</b></h3>
-                    <br><br>
+                    <br>
                     <h5 class="text-center text-white"><b>
                         No. of Users
                     </b><br>
@@ -300,7 +333,7 @@
                                         <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fas fa-home"></i>
                                                 Home</a></h6>
                                         <h6 class="mb-3 font-weight-bold"><a href="/wishlist/?email=<%=email%>"><i
-                                                    class="fa fa-bookmark"></i> Saved Products</a></h6>
+                                                    class="fa fa-bookmark"></i> Bookmarked Products</a></h6>
                                         <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fa fa-search"></i>
                                                 Search
                                                 Products</a></h6>
