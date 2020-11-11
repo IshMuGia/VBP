@@ -428,6 +428,11 @@ router.get("/product", (req, res) => {
     res.render("product");
 });
 
+router.get("/powerbi", (req, res) => {
+    // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
+    res.render("powerbi");
+});
+
 router.get("/checkout", (req, res) => {
     // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
     res.render("checkout");
