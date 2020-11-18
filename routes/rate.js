@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
     .save()
     .then(rev => {
         Sol.find({
-            brand: req.body.brand
+            brand: req.query.brand
         })
         .exec()
         .then(results => {
