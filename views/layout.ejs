@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="/vendor/font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/css/font-electro.css">
 
+
     <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
     <link rel="stylesheet" href="/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="/vendor/ion-rangeslider/css/ion.rangeSlider.css">
@@ -82,9 +83,11 @@
     <script src="/js/components/hs.scroll-nav.js"></script>
     <script src="/js/components/hs.go-to.js"></script>
     <script src="/js/components/hs.selectpicker.js"></script>
-
+   
     <!-- JS Plugins Init. -->
+    
     <script>
+
         $(window).on('load', function () {
             // initialization of HSMegaMenu component
             $('.js-mega-menu').HSMegaMenu({
@@ -99,7 +102,7 @@
         $(document).on('ready', function () {
             // initialization of header
             $.HSCore.components.HSHeader.init($('#header'));
-
+        
             // initialization of animation
             $.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
 

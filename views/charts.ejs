@@ -3,7 +3,7 @@
         <div class="u-header__section bg-primary">
             <!-- Logo and Menu -->
             <div class="py-2 py-xl-2 bg-primary-down-lg">
-                <div >
+                <div>
                     <div class="row align-items-center">
                         <!-- Logo-offcanvas-menu -->
                         <div class="col-auto">
@@ -50,7 +50,7 @@
                                             data-placement="top" title="Logout"><i
                                                 class="font-size-20 fas fa-sign-out-alt"></i></a></li>
                                     <li><%=email%></li>
-                                    <li><img src="/img/10.jpg" height="100" class="pr-2"></img></li>
+                                    <li><img src="/img/10.jpg" height="100" class="pr-2 pl-3"></img></li>
                                 </ul>
                             </div>
                         </div>
@@ -74,35 +74,34 @@
                 <!-- Content -->
                 <div class="js-scrollbar u-sidebar__body">
                     <div id="headerSidebarContent" class="u-sidebar__content u-header-sidebar__content">
-<br><br>
-<!-- Search Bar -->
-                         
-                                <form class="js-focus-state" action="/search" method="get">
-                                    <input class="form-control" name="email" type="hidden" id="email"
-                                        value="<%=email%>">
+                        <br><br>
+                        <!-- Search Bar -->
 
-                                    <label class="sr-only" for="searchproduct">Search</label>
-                                    <div class="input-group">
-                                        <select
-                                            class="form-control js-select selectpicker dropdown-select py-0 font-size-15"
-                                            data-live-search="true" name="word" id="word"
-                                            placeholder="Search for Products" required
-                                            data-style="form-control font-weight-normal border-color-primary border-right-0 height-40 border-width-2 rounded-left-pill border-primary">
-                                            <option value="">Search Solutions</option>
-                                           
-                                        </select>
-                                    
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="submit" id="searchProduct1">
-                                                <span class="ec ec-search font-size-24"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                           
-                        
-                            <!-- End Search Bar -->
-                            <br><br>
+                        <form class="js-focus-state" action="/search" method="get">
+                            <input class="form-control" name="email" type="hidden" id="email" value="<%=email%>">
+
+                            <label class="sr-only" for="searchproduct">Search</label>
+                            <div class="input-group">
+                                <select class="form-control js-select selectpicker dropdown-select py-0 font-size-15"
+                                    data-live-search="true" name="word" id="word" placeholder="Search for Products"
+                                    required
+                                    data-style="form-control font-weight-normal border-color-primary border-right-0 height-40 border-width-2 rounded-left-pill border-primary">
+                                    <option value="">Search Solutions</option>
+
+                                </select>
+
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="submit"
+                                        id="searchProduct1">
+                                        <span class="ec ec-search font-size-24"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <!-- End Search Bar -->
+                        <br><br>
 
                         <!-- List -->
                         <ul id="headerSidebarList" class="u-header-collapse__nav">
@@ -123,10 +122,12 @@
                                 <div id="headerSidebarPagesCollapse1" class="collapse"
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
+                                        <li><a href="/Vcharts/?brand=HPLaptops"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
                                         </li>
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Laptop
+                                        <li><a href="/Vcharts/?brand=HPAccessories"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Laptop
                                                 Accessories</a></li>
                                     </ul>
                                 </div>
@@ -143,10 +144,12 @@
                                 <div id="headerSidebarPagesCollapse2" class="collapse"
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
+                                        <li><a href="/Vcharts/?brand=LenovoLaptops"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
                                         </li>
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Laptop
+                                        <li><a href="/Vcharts/?brand=LenovoAccessories"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Laptop
                                                 Accessories</a></li>
                                     </ul>
                                 </div>
@@ -163,10 +166,12 @@
                                 <div id="headerSidebarPagesCollapse" class="collapse"
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
+                                        <li><a href="/Vcharts/?brand=AsusLaptops"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Laptops</a>
                                         </li>
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Routers</a>
+                                        <li><a href="/Vcharts/?brand=AsusRouters"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Routers</a>
                                         </li>
 
                                     </ul>
@@ -185,7 +190,8 @@
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Routers</a>
+                                        <li><a href="/Vcharts/?brand=TPLinkRouters"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Routers</a>
                                         </li>
 
                                     </ul>
@@ -204,10 +210,12 @@
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Smart
+                                        <li><a href="/Vcharts/?brand=ApplePhones"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Smart
                                                 Phones</a>
                                         </li>
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Smart Phone
+                                        <li><a href="/Vcharts/?brand=AppleAccessories"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Smart Phone
                                                 Accessories</a></li>
 
 
@@ -227,10 +235,12 @@
                                     data-parent="#headerSidebarContent">
                                     <ul id="headerSidebarPagesMenu" class="u-header-collapse__nav-list  text-primary">
 
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Smart
+                                        <li><a href="/Vcharts/?brand=OnePlusPhones"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Smart
                                                 Phones</a>
                                         </li>
-                                        <li><a href="/" class="nav-link u-header-collapse__submenu-nav-link">Smart Phone
+                                        <li><a href="/Vcharts/?brand=OnePlusAccessories"
+                                                class="nav-link u-header-collapse__submenu-nav-link">Smart Phone
                                                 Accessories</a></li>
 
 
@@ -246,141 +256,150 @@
 
             </div>
             <div class="col-8 bg-dark" style="overflow-x: hidden;">
-               <!-- <img class=" border border-dark" src="/img/999.jpeg" height="675 px"> -->
-               <iframe class="pt-3 pb-2" width="1204" height="663"  src="https://www.youtube.com/embed/WA4dDs0T7sM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               <div class="bg-primary pb-4">
-                   <h4 class=" float-left pt-2 pl-3 pb-2 font-weight-bold"><a href="/"><i class="fas fa-heart text-red"></i>
-                Rate us</a></h4>
-                <div class="bg-primary pb-4"><h4 class=" float-right pt-2 pr-3 font-weight-bold"><a href="/"><i class="fas fa-bookmark text-warning"></i>
-                    Bookmark it!</a></h4>
-               </div></div>
+                <!-- <img class=" border border-dark" src="/img/999.jpeg" height="675 px"> -->
+                <iframe class="pt-3 pb-2 " width="1204" height="663" src="<%=results[0].video%>"
+                    frameborder="0" allow="autoplay"></iframe>
+                <div class="bg-primary pb-5">
+                    <div class="rating float-left mt-0">
+                        <input type="radio" name="rating" value="5" id="5"
+                            onclick="location.href='/rate/?rating=5&brand=<%=results[0].brand%>'"><label
+                            for="5">☆</label>
+                        <input type="radio" name="rating" value="4" id="4"
+                            onclick="location.href='/rate/?rating=4&brand=<%=results[0].brand%>'"><label
+                            for="4">☆</label>
+                        <input type="radio" name="rating" value="3" id="3"
+                            onclick="location.href='/rate/?rating=3&brand=<%=results[0].brand%>'"><label
+                            for="3">☆</label>
+                        <input type="radio" name="rating" value="2" id="2"
+                            onclick="location.href='/rate/?rating=2&brand=<%=results[0].brand%>'"><label
+                            for="2">☆</label>
+                        <input type="radio" name="rating" value="1" id="1"
+                            onclick="location.href='/rate/?rating=1&brand=<%=results[0].brand%>'"><label
+                            for="1">☆</label>
+                        <h4 class="pt-2 pr-2 pl-3 font-weight-bold text-black">Rate Us</h4>
+
+                    </div>
+
+                    <div class="bg-primary pb-4">
+                        <h4 class=" float-right pt-2 pr-3 font-weight-bold"><a href="/"><i class="fas fa-bookmark "></i>
+                                Bookmark it!</a></h4>
+                    </div>
+                </div>
             </div>
             <div class="col bg-dark " id="main">
                 <a href="#" class="d-block">
-                    <img class="img-fluid pt-6"
-                        src="https://drive.google.com/uc?export=view&id=15EuaKAF2DWhlk0xy3FSK4ZbLNoAebjd0" >
+                    <img class="img-fluid pt-6" src="<%= results[0].logo%>">
                 </a>
                 <h3 class="text-center text-primary">
                     <br><b>
                         Overview</b></h3>
-                    <br>
-                    <h5 class="text-center text-white"><b>
-                        No. of Users
-                    </b><br>
-                    2000
-                    <br><b>
-                        No. of Likings
-                    </b><br>
-                    5000
-                    <br><b>
-                        No. of Searches
-                    </b><br>
-                    4000
-                    <br><b>
-                        No. of Products
-                    </b><br>
-                    20
-                
-            </h5><br><br><br><br><br><br><br><br><br>
-            <a href="/"
-            class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0"><h5>
-                View Report<i class="float-right pt-2 ec ec-arrow-right-categproes mr-2 font-size-20"></i></h5></a></div>
+                <br>
+                <h5 class="text-center text-white"><%= results[0].s_desc %></h5>
+                <h5 class="text-center text-white">
+
+                </h5><br><br><br><br><br><br>
+                <a href="/" class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0">
+                    <h5>
+                        View Report<i class="float-right pt-2 ec ec-arrow-right-categproes mr-2 font-size-20"></i></h5>
+                </a>
             </div>
+        </div>
 
-            <!-- ========== END MAIN CONTENT ========== -->
+        <!-- ========== END MAIN CONTENT ========== -->
 
-            <!-- ========== FOOTER ========== -->
-            <footer>
-                
-                <!-- Footer-bottom-widgets -->
-                <div class="pt-4 pb-4 bg-primary">
-                    <div class="container">
-                        <a href="/"
-                            class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0"><h4>
-                                <i class="ec ec-compare mr-2 font-size-25"></i> Request VBP</h4></a>
-                        
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="mb-6">
-                                    <a href="#" class="d-inline-block">
-                                        <img src="img/logo.png" alt="BuyAnalytics" height="100">
-                                    </a>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="row no-gutters">
-                                        <div class="col-auto">
-                                            <i class="ec ec-mail text-gray-90 font-size-56"></i>
-                                        </div>
-                                        <div class="col pl-3">
-                                            <div class="font-size-13 ">Got questions? Mail us!</div>
-                                            <div><a href="mailto:elex.BuyAnalytics@gmail.com"
-                                                    class="text-black">elex.BuyAnalytics@gmail.com</a></div>
-                                        </div>
+        <!-- ========== FOOTER ========== -->
+        <footer>
+
+            <!-- Footer-bottom-widgets -->
+            <div class="pt-4 pb-4 bg-primary">
+                <div class="container">
+                    <a href="/" class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0">
+                        <h4>
+                            <i class="ec ec-compare mr-2 font-size-25"></i> Request VBP</h4>
+                    </a>
+
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="mb-6">
+                                <a href="#" class="d-inline-block">
+                                    <img src="img/logo.png" alt="BuyAnalytics" height="100">
+                                </a>
+                            </div>
+                            <div class="mb-4">
+                                <div class="row no-gutters">
+                                    <div class="col-auto">
+                                        <i class="ec ec-mail text-gray-90 font-size-56"></i>
+                                    </div>
+                                    <div class="col pl-3">
+                                        <div class="font-size-13 ">Got questions? Mail us!</div>
+                                        <div><a href="mailto:elex.BuyAnalytics@gmail.com"
+                                                class="text-black">elex.BuyAnalytics@gmail.com</a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-7">
-                                <h5 class="text-black"> <b>Request VBP <a href="mailto:elex.BuyAnalytics@gmail.com"
-                                    class="text-black"> <br>elex.BuyAnalytics@gmail.com<br>
-                                Phone no.: <tel>9967937644</tel></a><br><br></b></h5>
-                                <div class="row">
-                                    <div class="col-12 col-md mb-4 mb-md-0">
-                                        <h6 class="mb-3 font-weight-bold">Find it Fast</h6>
-                                        <!-- List Group -->
-                                        <ul
-                                            class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent">
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=Asus">Asus</a></li>
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=TP-Link">TP-Link</a></li>
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=Apple">Apple</a></li>
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=OnePlus">OnePlus</a></li>
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=Lenovo">Lenovo</a></li>
-                                            <li><a class="list-group-item list-group-item-action"
-                                                    href="/brandshop/?brand=HP">HP</a></li>
-                                        </ul>
-                                        <!-- End List Group -->
-                                    </div>
-                                    <div class="col-12 col-md mb-4 mb-md-0">
-                                        <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fas fa-home"></i>
-                                                Home</a></h6>
-                                        <h6 class="mb-3 font-weight-bold"><a href="/wishlist/?email=<%=email%>"><i
-                                                    class="fa fa-bookmark"></i> Bookmarked Products</a></h6>
-                                        <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fa fa-search"></i>
-                                                Search
-                                                Products</a></h6>
-                                        <h6 class="mb-3 font-weight-bold"><a href="/logout"><i
-                                                    class="fas fa-sign-out-alt"></i>
-                                                Logout</a></h6>
-                                    </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <h5 class="text-black"> <b>Request VBP <a href="mailto:elex.BuyAnalytics@gmail.com"
+                                        class="text-black"> <br>elex.BuyAnalytics@gmail.com<br>
+                                        Phone no.: <tel>9967937644</tel></a><br><br></b></h5>
+                            <div class="row">
+                                <div class="col-12 col-md mb-4 mb-md-0">
+                                    <h6 class="mb-3 font-weight-bold">Find it Fast</h6>
+                                    <!-- List Group -->
+                                    <ul
+                                        class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent">
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Asus">Asus</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=TP-Link">TP-Link</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Apple">Apple</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=OnePlus">OnePlus</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Lenovo">Lenovo</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=HP">HP</a></li>
+                                    </ul>
+                                    <!-- End List Group -->
+                                </div>
+                                <div class="col-12 col-md mb-4 mb-md-0">
+                                    <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fas fa-home"></i>
+                                            Home</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/wishlist/?email=<%=email%>"><i
+                                                class="fa fa-bookmark"></i> Bookmarked Products</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fa fa-search"></i>
+                                            Search
+                                            Products</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/logout"><i
+                                                class="fas fa-sign-out-alt"></i>
+                                            Logout</a></h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Footer-bottom-widgets -->
-                <!-- Footer-copy-right -->
-                <div class="bg-gray-14 py-2">
-                    <div class="container">
-                        <div class="flex-center-between d-block d-md-flex">
-                            <div class="mb-3 mb-md-0">This site is for educational purpose only</div>
-                            <div class="text-md-right">
-                                © Ishmeet Kaur, Mushira Shaikh & Gianna Drego
-                            </div>
+            </div>
+            <!-- End Footer-bottom-widgets -->
+            <!-- Footer-copy-right -->
+            <div class="bg-gray-14 py-2">
+                <div class="container">
+                    <div class="flex-center-between d-block d-md-flex">
+                        <div class="mb-3 mb-md-0">This site is for educational purpose only</div>
+                        <div class="text-md-right">
+                            © Ishmeet Kaur, Mushira Shaikh & Gianna Drego
                         </div>
                     </div>
                 </div>
-                <!-- End Footer-copy-right -->
-            </footer>
-            <!-- ========== END FOOTER ========== -->
+            </div>
+            <!-- End Footer-copy-right -->
+        </footer>
+        <!-- ========== END FOOTER ========== -->
 
-            <!-- Go to Top -->
-            <a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed"
-                data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp"
-                data-hide-effect="slideOutDown">
-                <span class="fas fa-arrow-up u-go-to__inner"></span>
-            </a>
-            <!-- End Go to Top -->
+        <!-- Go to Top -->
+        <a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed"
+            data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp"
+            data-hide-effect="slideOutDown">
+            <span class="fas fa-arrow-up u-go-to__inner"></span>
+        </a>
+        <!-- End Go to Top -->
