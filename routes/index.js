@@ -1,65 +1,23 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const Prod = require('../models/Products');
+const Sol = require('../models/solutions');
 const Rev = require("../models/Review");
 const Wishlist = require('../models/Wishlist');
 const Act = require('../models/ActivityLog');
 
 router.get("/", (req, res) => {
-    //console.log('hello')
-    //console.log(req.session.email)
     if (req.session.email) {
-        //console.log(req.query.id);
-        res.redirect('/logged/?uid=' + req.session.uid);
+        res.redirect('/charts');
     } else {
         res.redirect("/myaccount");
-    }
-
-});
-//res.redirect('/logged/?uid=' + req.query.uid);
-router.get("/logged", (req, res) => {
-    if (req.session.email) {
-        Prod.find({}, 'brand s_des img1 mrp model_no -_id')
-            .exec()
-            .then(docs1 => {
-                Prod.find().distinct('brand')
-                    .then(docs2 => {
-                        Prod.find().distinct('sub_brand')
-                            .then(docs3 => {
-                                Prod.find().distinct('model_no')
-                                    .then(docs4 => {
-                                        Prod.find().distinct('s_des')
-                                            .then(docs5 => {
-                                                const docs = docs2.concat(docs3, docs4, docs5, docs1)
-                                                // console.log(docs)
-                                                res.render('index', {
-                                                    results: docs
-                                                })
-                                            })
-                                    })
-                                    .catch(err => {
-                                        res.status(500).json({
-                                            error: err
-                                        });
-                                    });
-                            });
-                    })
-                    .catch(err => {
-                        res.status(500).json({
-                            error: err
-                        });
-                    });
-            });
-    } else {
-        res.redirect("/myaccount")
     }
 
 });
 
 router.get("/myaccount", (req, res) => {
     if (req.session.email) {
-        res.redirect('/logged');
+        res.redirect('/');
 
     } else {
         const msg1 = "";
@@ -72,6 +30,37 @@ router.get("/myaccount", (req, res) => {
         });
     }
 });
+
+router.post("/charts", (req, res) => {
+    Sol.find({
+        brand: req.body.brand
+    })
+    .exec()
+    .then(results => {
+        console.log(results);
+        res.render('charts', {
+            results: results
+        });
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
+router.get("/charts", (req, res) => {
+    res.render("charts",{results: "NULL"});
+});
+
+// //res.redirect('/logged/?uid=' + req.query.uid);
+// router.get("/logged", (req, res) => {
+//     if (req.session.email) {
+//         res.redirect('/charts');
+//     } else {
+//         res.redirect("/myaccount")
+//     }
+// });
 
 router.get('/logout', (req, res) => {
     const currentDate = new Date();
@@ -438,11 +427,6 @@ router.get("/checkout", (req, res) => {
     res.render("checkout");
 });
 
-router.get("/charts", (req, res) => {
-    // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
-    res.render("charts");
-});
-
 router.get("/cart", (req, res) => {
     // return res.sendFile("home.ejs", { root: path.join(__dirname, '/views') });
     res.render("cart");
@@ -457,6 +441,44 @@ router.get("/checkout", (req, res) => {
     res.render("checkout");
 });
 
+// router.get("/logged", (req, res) => {
+//     if (req.session.email) {
+//         Prod.find({}, 'brand s_des img1 mrp model_no -_id')
+//             .exec()
+//             .then(docs1 => {
+//                 Prod.find().distinct('brand')
+//                     .then(docs2 => {
+//                         Prod.find().distinct('sub_brand')
+//                             .then(docs3 => {
+//                                 Prod.find().distinct('model_no')
+//                                     .then(docs4 => {
+//                                         Prod.find().distinct('s_des')
+//                                             .then(docs5 => {
+//                                                 const docs = docs2.concat(docs3, docs4, docs5, docs1)
+//                                                 // console.log(docs)
+//                                                 res.render('index', {
+//                                                     results: docs
+//                                                 })
+//                                             })
+//                                     })
+//                                     .catch(err => {
+//                                         res.status(500).json({
+//                                             error: err
+//                                         });
+//                                     });
+//                             });
+//                     })
+//                     .catch(err => {
+//                         res.status(500).json({
+//                             error: err
+//                         });
+//                     });
+//             });
+//     } else {
+//         res.redirect("/myaccount")
+//     }
+
+// });
 
 
 // Brand by Attribute Shop
