@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Rev = require("../models/Review");
-const Prod = require('../models/Products');
 const User = require('../models/Users');
 // var Integer = require('integer');
 
