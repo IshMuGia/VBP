@@ -51,7 +51,7 @@ router.get("/Vcharts", (req, res) => {
 
 router.get("/charts", (req, res) => {
     Sol.find({
-        brand: "none"
+        brand: "None"
     })
     .exec()
     .then(results => {
@@ -101,7 +101,7 @@ router.get('/logout', (req, res) => {
 });
 
 router.post("/addtowishlist", (req, res) => {
-    var email = req.body.email;
+    var email = req.session.email;
     var brand = req.body.brand;
     Wishlist.findOne({
             email: email,
@@ -120,6 +120,7 @@ router.post("/addtowishlist", (req, res) => {
                     .save()
                     .then(wishlist => {
                         console.log("wishlist added")
+                        res.redirect('/wishlist');
                     })
                     .catch(err => {
                         res.status(500).json({
@@ -128,72 +129,28 @@ router.post("/addtowishlist", (req, res) => {
                     });
             } else if (exist) {
                 s = 1;
-            }
-            //console.log(s)
-            Sol.find({
-                    brand: brand
+                Sol.find({
+                    brand: req.body.brand
                 })
                 .exec()
-                .then(docs1 => {
-                    //console.log(docs1);
-                    Prod.find({
-                            brand: docs1[0].brand
-                        })
-                        .exec()
-                        .then(rel => {
-                            rel = rel.slice(0, 6);
-                            //console.log(rel.length);
-                            const docs = docs1.concat(rel)
-                            if (s == 0) {
-                                docs[7] = {
-                                    "alert": "Product Saved!"
-                                };
-                            } else {
-                                docs[7] = {
-                                    "alert": "Product Already Exists!"
-                                };
-                            }
-
-                            Rev.find({
-                                    product: model_no
-                                })
-                                .exec()
-                                .then(docs2 => {
-                                    //console.log("ksddhlkf");
-                                    const document = docs.concat(docs2)
-                                    //console.log(document)
-                                    console.log(document.length);
-                                    res.render('product', {
-                                        results: document
-                                    });
-                                })
-                                .catch(err => {
-                                    res.status(500).json({
-                                        error: err
-                                    });
-                                });
-
-                        })
-                        .catch(err => {
-                            res.status(500).json({
-                                error: err
-                            });
-                        });
-
+                .then(results => {
+                    console.log(results);
+                    res.render('charts', {
+                        results: results
+                    });
                 })
                 .catch(err => {
                     res.status(500).json({
                         error: err
                     });
                 });
+            }
         })
         .catch(err => {
             res.status(500).json({
                 error: err
             });
         });
-
-
 });
 
 router.get("/removefromwishlist", (req, res) => {
@@ -203,7 +160,7 @@ router.get("/removefromwishlist", (req, res) => {
             email: email,
             model_no: model_no
         }).then(results => {
-            res.redirect('/wishlist/?email=' + req.query.email);
+            res.redirect('/wishlist');
             console.log("Removed from Wishlist");
         })
         .catch(err => {
@@ -214,7 +171,7 @@ router.get("/removefromwishlist", (req, res) => {
 });
 
 router.get("/wishlist", (req, res) => {
-    var email = req.query.email;
+    var email = req.session.email;
     Wishlist.find({
             email: email
         }, 'brand -_id')
