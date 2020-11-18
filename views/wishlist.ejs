@@ -1,628 +1,76 @@
-<!-- ========== HEADER ========== -->
-<header id="header" class="u-header u-header-left-aligned-nav">
-    <div class="u-header__section">
-        <!-- Logo and Menu -->
-        <div class="py-2 py-xl-2 bg-primary-down-lg">
-            <div class="container my-0dot5 my-xl-0">
-                <div class="row align-items-center">
-                    <!-- Logo-offcanvas-menu -->
-                    <div class="col-auto">
-                        <!-- Nav -->
-                        <nav
-                            class="navbar navbar-expand u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
-                            <!-- Logo -->
-                            <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center"
-                            href="/" aria-label="ElectronicX" margin-top="-100px">
-                            <img src="https://drive.google.com/uc?export=view&id=1BWrTCBQdRObKqhRZb3naajvmYvnFoSUh"
-                                alt="ElectronicX">
-                        </a>
-                        <!-- End Logo -->
-                            <!-- Fullscreen Toggle Button -->
-                            <button id="sidebarHeaderInvokerMenu" type="button"
-                                class="navbar-toggler d-block btn u-hamburger mr-3 mr-xl-0"
-                                aria-controls="sidebarHeader" aria-haspopup="true" aria-expanded="false"
-                                data-unfold-event="click" data-unfold-hide-on-scroll="false"
-                                data-unfold-target="#sidebarHeader1" data-unfold-type="css-animation"
-                                data-unfold-animation-in="fadeInLeft" data-unfold-animation-out="fadeOutLeft"
-                                data-unfold-duration="500">
-                                <span id="hamburgerTriggerMenu" class="u-hamburger__box  d-lg-block d-xl-none">
-                                    <span class="u-hamburger__inner"></span>
-                                </span>
-                            </button>
-                            <!-- End Fullscreen Toggle Button -->
-                        </nav>
-                        <!-- End Nav -->
-                        <!-- ========== HEADER SIDEBAR ========== -->
-                        <aside id="sidebarHeader1" class="u-sidebar u-sidebar--left"
-                        aria-labelledby="sidebarHeaderInvokerMenu">
-                        <div class="u-sidebar__scroller">
-                            <div class="u-sidebar__container">
-                                <div class="u-header-sidebar__footer-offset pb-0">
-                                    <!-- Toggle Button -->
-                                    <div class="position-absolute top-0 right-0 z-index-2 pt-4 pr-7">
-                                        <button type="button" class="close ml-auto"
-                                            aria-controls="sidebarHeader" aria-haspopup="true"
-                                            aria-expanded="false" data-unfold-event="click"
-                                            data-unfold-hide-on-scroll="false"
-                                            data-unfold-target="#sidebarHeader1"
-                                            data-unfold-type="css-animation"
-                                            data-unfold-animation-in="fadeInLeft"
-                                            data-unfold-animation-out="fadeOutLeft"
-                                            data-unfold-duration="500">
-                                            <span aria-hidden="true"><i
-                                                    class="ec ec-close-remove text-gray-90 font-size-20"></i></span>
-                                        </button>
+    <!-- ========== HEADER ========== -->
+    <header id="header" class="u-header u-header-left-aligned-nav">
+        <div class="u-header__section bg-primary">
+            <!-- Logo and Menu -->
+            <div class="py-2 py-xl-2 bg-primary-down-lg">
+                <div>
+                    <div class="row align-items-center">
+                        <!-- Logo-offcanvas-menu -->
+                        <div class="col-auto">
+                            <!-- Nav -->
+                            <nav
+                                class="navbar navbar-expand pl-2 u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
+                                <!-- Logo -->
+                                <a href="/" aria-label="BuyAnalytics">
+                                    <img src="/img/logo.png" alt="BuyAnalytics" height="100">
+                                </a>
+                                <!-- End Logo -->
+
+                            </nav>
+                            <!-- End Nav -->
+
+                        </div>
+                        <!-- End Logo-offcanvas-menu -->
+
+                        <!-- Customer Care -->
+                        <!-- <div class="d-none d-xl-block ml-auto">
+                            <div class="d-flex">
+                                <i class="ec ec-mail font-size-50 text-primary"></i>
+                                <div class="ml-2">
+                                    <div class="phone">
+                                        <strong>mail</strong> <a href="tel:800856800604" class="text-gray-90">(+800) 856 800 604</a>
                                     </div>
-                                    <!-- End Toggle Button -->
-
-                                    <!-- Content -->
-                                    <div class="js-scrollbar u-sidebar__body">
-                                        <div id="headerSidebarContent"
-                                            class="u-sidebar__content u-header-sidebar__content">
-                                            <!-- Logo -->
-                                            <a class="d-flex ml-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-vertical"
-                                                href="/" aria-label="Electro">
-                                                <img src="https://drive.google.com/uc?export=view&id=1BWrTCBQdRObKqhRZb3naajvmYvnFoSUh"
-                                                    alt="ElectronicX">
-                                            </a>
-                                            <!-- End Logo -->
-
-                                            <!-- List -->
-                                            <ul id="headerSidebarList" class="u-header-collapse__nav">
-                                                <!-- Home Section -->
-                                                <li class="u-has-submenu u-header-collapse__submenu">
-                                                    <a class="u-header-collapse__nav-link"
-                                                        href="/"><b>Home</b></a>
-
-                                                </li>
-                                                <!-- End Home Section -->
-                                                <li class="u-has-submenu u-header-collapse__submenu">
-                                                    <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                        href="javascript:;"
-                                                        data-target="#headerSidebarPagesCollapse1"
-                                                        role="button" data-toggle="collapse"
-                                                        aria-expanded="false"
-                                                        aria-controls="headerSidebarPagesCollapse">
-                                                        <b><span class="ec ec-laptop"> </span> Laptops</b>
-                                                                </a>
-
-                                                                <div id="headerSidebarPagesCollapse1" class="collapse"
-                                                                    data-parent="#headerSidebarContent">
-                                                                    <ul id="headerSidebarPagesMenu"
-                                                                        class="u-header-collapse__nav-list  text-primary">
-                                                                        <li><a href="/subbrandshop/?sub_brand=Essentials"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Essentials</a>
-                                                                        </li>
-
-                                                                        <li><a href="/subbrandshop/?sub_brand=Business"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Business
-                                                                                Laptops</a></li>
-
-                                                                        <li><a class="nav-link u-header-collapse__submenu-nav-link"
-                                                                                href="/subbrandshop/?sub_brand=Gaming">Gaming
-                                                                                Laptops</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-
-                                                            <li class="u-has-submenu u-header-collapse__submenu">
-                                                                <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                    href="javascript:;"
-                                                                    data-target="#headerSidebarPagesCollapse2"
-                                                                    role="button" data-toggle="collapse"
-                                                                    aria-expanded="false"
-                                                                    aria-controls="headerSidebarPagesCollapse">
-                                                                    <b><span class="ec ec-smartphones"> </span> Smart
-                                                                        Phones</b>
-                                                                </a>
-
-                                                                <div id="headerSidebarPagesCollapse2" class="collapse"
-                                                                    data-parent="#headerSidebarContent">
-                                                                    <ul id="headerSidebarPagesMenu"
-                                                                        class="u-header-collapse__nav-list  text-primary">
-                                                                        <li><a href="/subbrandshop/?sub_brand=5 Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">5
-                                                                                Series</a></li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=6 Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">6
-                                                                                Series</a></li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=7 Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">7
-                                                                                Series</a></li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=8 Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">8
-                                                                                Series</a></li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=X Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">X
-                                                                                Series</a></li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=11 Series"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">11
-                                                                                Series</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                            <li class="u-has-submenu u-header-collapse__submenu">
-                                                                <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                    href="javascript:;"
-                                                                    data-target="#headerSidebarPagesCollapse"
-                                                                    role="button" data-toggle="collapse"
-                                                                    aria-expanded="false"
-                                                                    aria-controls="headerSidebarPagesCollapse">
-                                                                    <b><span class="ec ec-headphones"> </span>
-                                                                        Accessories</b>
-                                                                </a>
-
-                                                                <div id="headerSidebarPagesCollapse" class="collapse"
-                                                                    data-parent="#headerSidebarContent">
-                                                                    <ul id="headerSidebarPagesMenu"
-                                                                        class="u-header-collapse__nav-list  text-primary">
-
-                                                                        <li>Mouse</li>
-
-                                                                        <li><a href="/subbrandshop/?sub_brand=Wireless Mouse"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Wireless</a>
-                                                                        </li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=Wired Mouse"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Wired</a>
-                                                                        </li>
-                                                                        <li>Earphones</li>
-
-                                                                        <li><a href="/subbrandshop/?sub_brand=Wireless Earphones"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Wireless</a>
-                                                                        </li>
-                                                                        <li><a href="/subbrandshop/?sub_brand=Wired Earphones"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Wired</a>
-                                                                        </li>
-
-
-                                                                        <li>Pen Drives</li>
-
-                                                                        <li><a href="/subbrandshop/?sub_brand=Pen Drives"
-                                                                                class="nav-link u-header-collapse__submenu-nav-link">Pen
-                                                                                Drives</a></li>
-
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-                                                            <li class="u-has-submenu u-header-collapse__submenu">
-                                                                <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer"
-                                                                    href="javascript:;"
-                                                                    data-target="#headerSidebarPagesCollapse3"
-                                                                    role="button" data-toggle="collapse"
-                                                                    aria-expanded="false"
-                                                                    aria-controls="headerSidebarPagesCollapse">
-                                                                    <b><span class="ec ec-grid-view"> </span>
-                                                                        Networking</b>
-                                                    </a>
-
-                                                    <div id="headerSidebarPagesCollapse3" class="collapse"
-                                                        data-parent="#headerSidebarContent">
-                                                        <ul id="headerSidebarPagesMenu"
-                                                            class="u-header-collapse__nav-list  text-primary">
-
-                                                            <li>Routers</li>
-
-                                                            <li><a href="/subbrandshop/?sub_brand=Wireless Router"
-                                                                    class="nav-link u-header-collapse__submenu-nav-link">Wireless
-                                                                    Routers</a></li>
-                                                            <li><a href="/subbrandshop/?sub_brand=Gaming Router"
-                                                                    class="nav-link u-header-collapse__submenu-nav-link">Gaming
-                                                                    Routers</a></li>
-                                                                    <li><a href="/subbrandshop/?sub_brand=2 Pack Models"
-                                                                        class="nav-link u-header-collapse__submenu-nav-link">2 Pack Models</a></li>
-                                                                    
-
-                                                            <li>Adapters</li>
-
-                                                            <li><a href="/subbrandshop/?sub_brand=Wireless Adapter"
-                                                                    class="nav-link u-header-collapse__submenu-nav-link">Wireless
-                                                                    Adapters</a></li>
-
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <!-- End List -->
-                                        </div>
+                                    <div class="email">
+                                        E-mail: <a href="mailto:info@electro.com?subject=Help Need" class="text-gray-90">info@electro.com</a>
                                     </div>
-                                    <!-- End Content -->
                                 </div>
                             </div>
-                        </div>
-                    </aside>
-                    <!-- ========== END HEADER SIDEBAR ========== -->
-                    </div>
-                    <!-- End Logo-offcanvas-menu -->
+                        </div> -->
+                        <!-- End Customer Care -->
+                        <!-- Header Icons -->
+                        <div class="col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static ml-auto">
+                            <div class="d-inline-flex">
+                                <ul class="d-flex list-unstyled mb-0 align-items-center">
 
-                    <!-- Customer Care -->
-                    <!-- <div class="d-none d-xl-block ml-auto">
-                        <div class="d-flex">
-                            <i class="ec ec-mail font-size-50 text-primary"></i>
-                            <div class="ml-2">
-                                <div class="phone">
-                                    <strong>mail</strong> <a href="tel:800856800604" class="text-gray-90">(+800) 856 800 604</a>
-                                </div>
-                                <div class="email">
-                                    E-mail: <a href="mailto:info@electro.com?subject=Help Need" class="text-gray-90">info@electro.com</a>
-                                </div>
+
+                                    <li class="col"><a href="/wishlist/?email=<%=email%>" class="text-gray-90"
+                                            data-toggle="tooltip" data-placement="top" title="Bookmarked"><i
+                                                class="font-size-18 fa fa-bookmark"></i></a></li>
+                                    <li class="col"><a href="/logout" class="text-gray-90" data-toggle="tooltip"
+                                            data-placement="top" title="Logout"><i
+                                                class="font-size-20 fas fa-sign-out-alt"></i></a></li>
+                                    <li><%=email%></li>
+                                    <li><img src="/img/10.jpg" height="100" class="pr-2 pl-3"></img></li>
+                                </ul>
                             </div>
                         </div>
-                    </div> -->
-                    <!-- End Customer Care -->
-                    <!-- Header Icons -->
-                    <div class="col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static ml-auto">
-                        <div class="d-inline-flex">
-                            <ul class="d-flex list-unstyled mb-0 align-items-center">
-
-
-                                <li class="col"><a href="/wishlist/?email=<%=email%>" class="text-gray-90"
-                                        data-toggle="tooltip" data-placement="top" title="Saved"><i
-                                            class="font-size-18 fa fa-bookmark"></i></a></li>
-                                <li class="col"><a href="/logout" class="text-gray-90" data-toggle="tooltip"
-                                        data-placement="top" title="Logout"><i
-                                            class="font-size-20 fas fa-sign-out-alt"></i></a></li>
-                                <li><%=email%></li>
-                            </ul>
-                        </div>
+                        <!-- End Header Icons -->
                     </div>
-                    <!-- End Header Icons -->
                 </div>
             </div>
+            <!-- End Logo and Menu -->
+
+
         </div>
-        <!-- End Logo and Menu -->
+    </header>
+    <!-- ========== END HEADER ========== -->
 
-        <!-- Primary-menu-wide -->
-        <div class="d-none d-xl-block bg-primary">
-            <div class="container">
-                <div class="min-height-45">
-                    <!-- Nav -->
-                    <nav
-                        class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--wide u-header__navbar--no-space">
-                        <!-- Navigation -->
-                        <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
-                            <ul class="navbar-nav u-header__navbar-nav">
-                                <!-- Home -->
-                                <li class="nav-item u-header__nav-item">
-                                    <a class="nav-link u-header__nav-link" href="/">Home</a>
-                                </li>
-                                <!-- End Home -->
-
-                                <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover"
-                                    data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                    <a id="MoviesGamesMegaMenu"
-                                        class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                        href="javascript:;" aria-haspopup="true"
-                                        aria-expanded="false"><span
-                                        class="ec ec-laptop"> </span> Laptops</a>
-
-                                <!-- Movies & Games - Mega Menu -->
-                                <div class="hs-mega-menu w-100 u-header__sub-menu"
-                                    aria-labelledby="LaptopsMegaMenu">
-                                    <div class="row u-header__mega-menu-wrapper">
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <br>
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1dKxBl0MeRpqUKvH7FkdHqvtJ3ThKCOZa"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br><br>
-                                                    <span class="nav-link u-header__sub-menu-title"><a
-                                                            href="/subbrandshop/?sub_brand=Essentials"
-                                                            class="nav-link u-header__sub-menu-nav-link">Essentials</a></span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1UnB3IB8HyVrYtcnAcqYVOY4PFiv54h_v"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br><br>
-                                                    <span class="nav-link u-header__sub-menu-title"><a
-                                                            href="/subbrandshop/?sub_brand=Business"
-                                                            class="nav-link u-header__sub-menu-nav-link">Business
-                                                            Laptops</a></span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1DQOVDPkF9yeP5UPvIfrS23g0Iy8C8kSu"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br><br>
-                                                    <span class="nav-link u-header__sub-menu-title"><a
-                                                            href="/subbrandshop/?sub_brand=Gaming"
-                                                            class="nav-link u-header__sub-menu-nav-link">Gaming
-                                                            Laptops</a></span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Movies & Games - Mega Menu -->
-                            </li>
-                            <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover"
-                                data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                <a id="MoviesGamesMegaMenu"
-                                    class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                    href="javascript:;" aria-haspopup="true" aria-expanded="false"><span
-                                        class="ec ec-smartphones"> </span> Smart
-                                    Phones</a>
-
-                                <!-- Movies & Games - Mega Menu -->
-                                <div class="hs-mega-menu w-100 u-header__sub-menu"
-                                    aria-labelledby="PhonesMegaMenu">
-                                    <div class="row u-header__mega-menu-wrapper">
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1blFu4QT6ST4-D1y8Cq3U5pJCxXd2tbUa"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br>
-                                                    <span
-                                                        class="u-header__sub-menu-title">OnePlus</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="/subbrandshop/?sub_brand=5 Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">5
-                                                                Series</a></li>
-                                                        <li><a href="/subbrandshop/?sub_brand=6 Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">6
-                                                                Series</a></li>
-                                                        <li><a href="/subbrandshop/?sub_brand=8 Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">8
-                                                                Series</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1DWXnWni9X8y1YGq1-EHuJ1zRi5paCBvP"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br><br><br>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="/subbrandshop/?sub_brand=7 Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">7
-                                                                Series</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1c_CtfHOyUSpmE7h8wrX4C4ajeygreLMB"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br>
-                                                    <span class="u-header__sub-menu-title">Apple</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="/subbrandshop/?sub_brand=X Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">X
-                                                                Series</a></li>
-                                                        <li><a href="/subbrandshop/?sub_brand=11 Series"
-                                                                class="nav-link u-header__sub-menu-nav-link">11
-                                                                Series</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Movies & Games - Mega Menu -->
-                            </li>
-                            <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover"
-                                data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                <a id="AccessoriesMegaMenu"
-                                    class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                    href="javascript:;" aria-haspopup="true" aria-expanded="false"><span
-                                        class="ec ec-headphones"> </span> Accessories</a>
-
-                                <!-- Movies & Games - Mega Menu -->
-                                <div class="hs-mega-menu w-100 u-header__sub-menu"
-                                    aria-labelledby="LaptopsMegaMenu">
-                                    <div class="row u-header__mega-menu-wrapper">
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1mgJeJaPapQ-DGpbEGdDSY0i_Kb3BR1-W"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br><br>
-                                                    <span class="nav-link u-header__sub-menu-title"><a
-                                                            href="/subbrandshop/?sub_brand=Pen Drive"
-                                                            class="nav-link u-header__sub-menu-nav-link">Pen
-                                                            Drives</a></span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1PJv1fStiKe_Ka4zqX4gC3qsjpwHTMsvN"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br>
-                                                    <span class="u-header__sub-menu-title">Mouse</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="/subbrandshop/?sub_brand=Wireless Mouse"
-                                                                class="nav-link u-header__sub-menu-nav-link">Wireless</a>
-                                                        </li>
-                                                        <li><a href="/subbrandshop/?sub_brand=Wired Mouse"
-                                                                class="nav-link u-header__sub-menu-nav-link">Wired</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="#" class="d-block">
-                                                        <img class="img-fluid"
-                                                            src="https://drive.google.com/uc?export=view&id=1eZMh8S8U9qJhdKODRvjzd7K9-jySTp6k"
-                                                            alt="Image Description">
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <br>
-                                                    <span
-                                                        class="u-header__sub-menu-title">Earphones</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="/subbrandshop/?sub_brand=Wireless Earphones"
-                                                                class="nav-link u-header__sub-menu-nav-link">Wireless</a>
-                                                        </li>
-                                                        <li><a href="/subbrandshop/?sub_brand=Wired Earphones"
-                                                                class="nav-link u-header__sub-menu-nav-link">Wired</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Movies & Games - Mega Menu -->
-                            </li>
-                            <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover"
-                                data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                <a id="MoviesGamesMegaMenu"
-                                    class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                    href="javascript:;" aria-haspopup="true" aria-expanded="false"><span
-                                        class="ec ec-grid-view"> </span> Networking</a>
-
-                                    <!-- Movies & Games - Mega Menu -->
-                                    <div class="hs-mega-menu w-100 u-header__sub-menu"
-                                        aria-labelledby="MoviesGamesMegaMenu">
-                                        <div class="row u-header__mega-menu-wrapper">
-                                            <div class="col-md-4">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a href="#" class="d-block">
-                                                            <img class="img-fluid"
-                                                                src="https://drive.google.com/uc?export=view&id=17T_Z9bhfb4xzp2hpinM-r_9OjaT1NN4Z"
-                                                                alt="Image Description">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col">
-                                                        <br><br>
-                                                        <span
-                                                            class="u-header__sub-menu-title">Routers</span>
-                                                        <ul class="u-header__sub-menu-nav-group">
-                                                            <li><a href="/subbrandshop/?sub_brand=Wireless Router"
-                                                                    class="nav-link u-header__sub-menu-nav-link">Wireless
-                                                                    Routers</a></li>
-                                                            <li><a href="/subbrandshop/?sub_brand=Gaming Router"
-                                                                    class="nav-link u-header__sub-menu-nav-link">Gaming
-                                                                    Routers</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a href="#" class="d-block">
-                                                            <img class="img-fluid"
-                                                                src="https://drive.google.com/uc?export=view&id=1_xMPNBWEi0zFi2vnhO2NJz09CoKiBM_Q"
-                                                                alt="Image Description">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col">
-                                                        <br><br>
-                                                        <span class="nav-link u-header__sub-menu-title"><a
-                                                                href="/subbrandshop/?sub_brand=Wireless Adapter"
-                                                                class="nav-link u-header__sub-menu-nav-link">Wireless
-                                                                Adapters</a></span>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a href="#" class="d-block">
-                                                            <img class="img-fluid"
-                                                                src="https://drive.google.com/uc?export=view&id=1uB5LfNzyd7sLkzZB0X9_CN9ZgBTCMXVW"
-                                                                alt="Image Description">
-                                                        </a>
-                                                    </div>
-                                                    <div class="col">
-                                                        <br><br><br>
-                                                        <span class="nav-link u-header__sub-menu-title"><a
-                                                                href="/subbrandshop/?sub_brand=2 Pack Models"
-                                                                class="nav-link u-header__sub-menu-nav-link">2
-                                                                Pack Models</a></span>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Movies & Games - Mega Menu -->
-                                </li>
-                                <!-- End Pages (rest tabs in blank.ejs-->
-                            </ul>
-                        </div>
-                        <!-- End Navigation -->
-                    </nav>
-                    <!-- End Nav -->
-                </div>
-            </div>
-        </div>
-        <!-- End Primary-menu-wide -->
-    </div>
-</header>
-<!-- ========== END HEADER ========== -->
-
-<!-- ========== MAIN CONTENT ========== -->
+    <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main" class="cart-page">
 
     <div class="container">
         <div class="my-6">
-            <h1 class="text-center">My Saved Products</h1>
+            <h1 class="text-center">Bookmarked Products</h1>
         </div>
         <div class="mb-16 wishlist-table">
             <form class="mb-4" action="#" method="post">
@@ -632,9 +80,9 @@
                             <tr>
                                 <th class="product-remove">&nbsp;</th>
                                 <th class="product-thumbnail">&nbsp;</th>
-                                <th class="product-name ">Product</th>
-                                <th class="product-brand">Brand</th>
-                                <th class="product-price">Unit Price</th>
+                                <th class="product-name ">Solution</th>
+                                <th class="product-brand">Description</th>
+                                <th class="product-price">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -670,84 +118,106 @@
 </main>
 <!-- ========== END MAIN CONTENT ========== -->
 
-<!-- ========== FOOTER ========== -->
-<footer>
-    <!-- Footer-bottom-widgets -->
-    <div class="pt-8 pb-4 bg-primary">
-        <div class="container mt-1">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="mb-6">
-                        <a href="#" class="d-inline-block">
-                            <img src="https://drive.google.com/uc?export=view&id=1BWrTCBQdRObKqhRZb3naajvmYvnFoSUh"
-                                alt="ElectronicX" height="100">
-                        </a>
-                    </div>
-                    <div class="mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-auto">
-                                <i class="ec ec-mail text-gray-90 font-size-56"></i>
-                            </div>
-                            <div class="col pl-3">
-                                <div class="font-size-13 ">Got questions? Mail us!</div>
-                                <div><a href="mailto:elex.electronicx@gmail.com" class="text-black">elex.electronicx@gmail.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-12 col-md mb-4 mb-md-0">
-                            <h6 class="mb-3 font-weight-bold">Find it Fast</h6>
-                            <!-- List Group -->
-                            <ul
-                                class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent">
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=Asus">Asus</a></li>
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=TP-Link">TP-Link</a></li>
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=Apple">Apple</a></li>
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=OnePlus">OnePlus</a></li>
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=Lenovo">Lenovo</a></li>
-                                <li><a class="list-group-item list-group-item-action"
-                                        href="/brandshop/?brand=HP">HP</a></li>
-                            </ul>
-                            <!-- End List Group -->
-                        </div>
-                        <div class="col-12 col-md mb-4 mb-md-0">
-                            <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fas fa-home"></i> Home</a></h6>
-                            <h6 class="mb-3 font-weight-bold"><a href="/wishlist/?email=<%=email%>"><i class="fa fa-bookmark"></i> Saved Products</a></h6>
-                        <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fa fa-search"></i> Search Products</a></h6>
-                        <h6 class="mb-3 font-weight-bold"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></h6>
-                </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Footer-bottom-widgets -->
-    <!-- Footer-copy-right -->
-    <div class="bg-gray-14 py-2">
-        <div class="container">
-            <div class="flex-center-between d-block d-md-flex">
-                <div class="mb-3 mb-md-0">This site is for educational purpose only</div>
-                <div class="text-md-right">
-                    © Ishmeet Kaur, Mushira Shaikh & Gianna Drego
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Footer-copy-right -->
-</footer>
-<!-- ========== END FOOTER ========== -->
+        <!-- ========== FOOTER ========== -->
+        <footer>
 
-<!-- Go to Top -->
-<a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed"
-    data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp" data-hide-effect="slideOutDown">
-    <span class="fas fa-arrow-up u-go-to__inner"></span>
-</a>
-<!-- End Go to Top -->
+            <!-- Footer-bottom-widgets -->
+            <div class="pt-4 pb-4 bg-primary">
+                <div class="container">
+                    <a href="/" class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0">
+                        <h4>
+                            <i class="ec ec-compare mr-2 font-size-25"></i> Request VBP</h4>
+                    </a>
+
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="mb-6">
+                                <a href="#" class="d-inline-block">
+                                    <img src="img/logo.png" alt="BuyAnalytics" height="100">
+                                </a>
+                            </div>
+                            <div class="mb-4">
+                                <div class="row no-gutters">
+                                    <div class="col-auto">
+                                        <i class="ec ec-mail text-gray-90 font-size-56"></i>
+                                    </div>
+                                    <div class="col pl-3">
+                                        <div class="font-size-13 ">Got questions? Mail us!</div>
+                                        <div><a href="mailto:elex.BuyAnalytics@gmail.com"
+                                                class="text-black">elex.BuyAnalytics@gmail.com</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <h5 class="text-black"> <b>Request VBP <a href="mailto:elex.BuyAnalytics@gmail.com"
+                                        class="text-black"> <br>elex.BuyAnalytics@gmail.com<br>
+                                        Phone no.: <tel>9967937644</tel></a><br><br></b></h5>
+                            <div class="row">
+                                <div class="col-12 col-md mb-4 mb-md-0">
+                                    <h6 class="mb-3 font-weight-bold">Find it Fast</h6>
+                                    <!-- List Group -->
+                                    <ul
+                                        class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent">
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Asus">Asus</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=TP-Link">TP-Link</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Apple">Apple</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=OnePlus">OnePlus</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=Lenovo">Lenovo</a></li>
+                                        <li><a class="list-group-item list-group-item-action"
+                                                href="/brandshop/?brand=HP">HP</a></li>
+                                    </ul>
+                                    <!-- End List Group -->
+                                </div>
+                                <div class="col-12 col-md mb-4 mb-md-0">
+                                    <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fas fa-home"></i>
+                                            Home</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/wishlist/?email=<%=email%>"><i
+                                                class="fa fa-bookmark"></i> Bookmarked Products</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/"><i class="fa fa-search"></i>
+                                            Search
+                                            Products</a></h6>
+                                    <h6 class="mb-3 font-weight-bold"><a href="/logout"><i
+                                                class="fas fa-sign-out-alt"></i>
+                                            Logout</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer-bottom-widgets -->
+            <!-- Footer-copy-right -->
+            <div class="bg-gray-14 py-2">
+                <div class="container">
+                    <div class="flex-center-between d-block d-md-flex">
+                        <div class="mb-3 mb-md-0">This site is for educational purpose only</div>
+                        <div class="text-md-right">
+                            © Ishmeet Kaur, Mushira Shaikh & Gianna Drego
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer-copy-right -->
+        </footer>
+        <!-- ========== END FOOTER ========== -->
+
+        <!-- Go to Top -->
+        <a class="js-go-to u-go-to" href="#" data-position='{"bottom": 15, "right": 15 }' data-type="fixed"
+            data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp"
+            data-hide-effect="slideOutDown">
+            <span class="fas fa-arrow-up u-go-to__inner"></span>
+        </a>
+        <!-- End Go to Top -->
+        
+        
+        
+        
+        
+
+
