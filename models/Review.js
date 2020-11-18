@@ -6,28 +6,11 @@ const RevSchema = new mongoose.Schema({
         required: true
 
     },
-
     email: {
         type: String,
         required: true
-
     },
-    fname: {
-        type: String,
-        required: true
-
-    },
-    lname: {
-        type: String,
-        required: true
-
-    },
-    product: {
-        type: String,
-        required: true
-
-    },
-    comment: {
+    brand: {
         type: String,
         required: true
 
@@ -39,6 +22,6 @@ const RevSchema = new mongoose.Schema({
     }
 });
 
-const Review = mongoose.model('Review', RevSchema, 'product_review');
+const Review = mongoose.model('Review', RevSchema, 'vbp_ratings');
 
 module.exports = Review;

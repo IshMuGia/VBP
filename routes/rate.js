@@ -2,9 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Rev = require("../models/Review");
-const User = require('../models/Users');
-// var Integer = require('integer');
-
+const Sol = require('../models/solutions');
 
 router.post("/", (req, res) => {
     var rating = req.body.rating;
@@ -21,7 +19,7 @@ router.post("/", (req, res) => {
     .save()
     .then(rev => {
         Sol.find({
-            brand: req.query.brand
+            brand: req.body.brand
         })
         .exec()
         .then(results => {
