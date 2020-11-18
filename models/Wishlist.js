@@ -11,7 +11,7 @@ email: {
     required: true
 
 },
-model_no: {
+brand: {
     type: String,
     required: true
 
