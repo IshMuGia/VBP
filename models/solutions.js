@@ -12,11 +12,6 @@ const SolSchema = new mongoose.Schema({
         required: true
 
     },
-    category: {
-        type: String,
-        required: true
-
-    },
     video: {
         type: String,
         required: true

@@ -31,9 +31,9 @@ router.get("/myaccount", (req, res) => {
     }
 });
 
-router.post("/charts", (req, res) => {
+router.get("/Vcharts", (req, res) => {
     Sol.find({
-        brand: req.body.brand
+        brand: req.query.brand
     })
     .exec()
     .then(results => {
@@ -50,7 +50,21 @@ router.post("/charts", (req, res) => {
 });
 
 router.get("/charts", (req, res) => {
-    res.render("charts",{results: "NULL"});
+    Sol.find({
+        brand: "none"
+    })
+    .exec()
+    .then(results => {
+        console.log(results);
+        res.render('charts', {
+            results: results
+        });
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
 });
 
 // //res.redirect('/logged/?uid=' + req.query.uid);
@@ -205,19 +219,19 @@ router.get("/addtocart", (req, res) => {
         });
 });
 
-router.get("/addtowishlist", (req, res) => {
-    var email = req.query.email;
-    var model_no = req.query.model_no;
+router.post("/addtowishlist", (req, res) => {
+    var email = req.body.email;
+    var brand = req.body.brand;
     Wishlist.findOne({
             email: email,
-            model_no: model_no
+            brand: brand
         })
         .then(exist => {
             if (!exist) {
                 s = 0;
                 const newwish = new Wishlist({
                     _id: new mongoose.Types.ObjectId(),
-                    model_no: model_no,
+                    brand: brand,
                     email: email,
                 });
                 console.log("newwish obj created")
