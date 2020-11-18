@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const Rev = require("../models/Review");
 const Sol = require('../models/solutions');
 
-router.post("/", (req, res) => {
-    var rating = req.body.rating;
-    var brand = req.body.brand;    
+router.get("/", (req, res) => {
+    var rating = req.query.rating;
+    var brand = req.query.brand;    
     var email = req.session.email;
     const newRev = new Rev({
     _id: new mongoose.Types.ObjectId(),
