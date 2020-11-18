@@ -130,7 +130,7 @@ router.get("/addtowishlist", (req, res) => {
             } else if (exist) {
                 s = 1;
                 Sol.find({
-                    brand: req.body.brand
+                    brand: req.query.brand
                 })
                 .exec()
                 .then(results => {
@@ -179,7 +179,7 @@ router.get("/wishlist", (req, res) => {
         .then(docs1 => {
             Sol.find()
                 .where('brand')
-                .in(docs1.map(i => i.model_no))
+                .in(docs1.map(i => i.brand))
                 .exec()
                 .then(records => {
                     res.render("wishlist", {
