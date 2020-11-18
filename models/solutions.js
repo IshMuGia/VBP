@@ -22,7 +22,7 @@ const SolSchema = new mongoose.Schema({
         required: true
 
     },
-    s_des: {
+    s_desc: {
         type: String,
         required: true
 
