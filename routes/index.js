@@ -100,9 +100,9 @@ router.get('/logout', (req, res) => {
         });
 });
 
-router.post("/addtowishlist", (req, res) => {
+router.get("/addtowishlist", (req, res) => {
     var email = req.session.email;
-    var brand = req.body.brand;
+    var brand = req.query.brand;
     Wishlist.findOne({
             email: email,
             brand: brand
