@@ -28,6 +28,30 @@ router.get("/", (req, res) => {
     
 });
 
+router.get("/pb", (req, res) => {
+    var rating = req.query.rating;
+    var brand = req.query.brand;    
+    var email = req.session.email;
+    const newRev = new Rev({
+    _id: new mongoose.Types.ObjectId(),
+    rating: rating,
+    email: email,
+    brand: brand
+    });
+    //console.log(newRev)
+    newRev
+    .save()
+    .then(rev => {
+        res.redirect('/powerbi/?brand='+brand );        
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
+    
+});
+
 module.exports = router;
 ////let doc = await 
 
