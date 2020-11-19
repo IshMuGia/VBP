@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
         .exec()
         .then(results => {
             console.log(results);
-            res.render('charts', {
+            res.render('charts/?brand='+brand, {
                 results: results
             });
         })

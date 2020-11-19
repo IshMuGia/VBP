@@ -17,12 +17,12 @@ router.post("/", (req, res) => {
             .then(Search => {
                 console.log("Added to Search Collection");
             })
-        Prod.find({ $or: [{ brand: word }, { sub_brand: word }, { model_no: word }, { s_des: word }]  })
+        Sol.find({ brand: word },'brand -_id')
             .exec()
             .then(results => {
                 if (results) {
                     console.log(results);
-                    res.render("shop", { results: results });
+                    res.redirect("/Vcharts/?brand="+results[0].brand);
                 } else { console.log("Empty") }
             })
             .catch(err => {
