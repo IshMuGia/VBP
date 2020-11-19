@@ -182,13 +182,24 @@ router.get("/addtowishlist", (req, res) => {
                 s = 1;
                 Sol.find({
                     brand: req.query.brand
-                })
+                },'-_id')
                 .exec()
-                .then(results => {
-                    console.log(results);
-                    res.render('charts', {
-                        results: results
-                    });
+                .then(results0 => {
+                    Sol.find({},'brand -_id')
+                    .exec()
+                    .then(results1=>{
+                        results1 = results1.slice(1);
+                        const results = results0.concat(results1)            
+                        console.log(results);
+                        res.render('charts', {
+                            results: results
+                        });
+                    })
+                    .catch(err => {
+                        res.status(500).json({
+                            error: err
+                        });
+                    });        
                 })
                 .catch(err => {
                     res.status(500).json({
