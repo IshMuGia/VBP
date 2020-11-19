@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Search = require('../models/Search');
+const Sol = require('../models/solutions');
 
 router.post("/", (req, res) => {
     var email = req.session.email;
