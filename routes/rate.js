@@ -18,22 +18,20 @@ router.get("/", (req, res) => {
     newRev
     .save()
     .then(rev => {
-        Sol.find({
-            brand: req.query.brand
-        })
-        .exec()
-        .then(results => {
-            console.log(results);
-            res.redirect('/Vcharts/?brand='+brand, {
-                results: results
-            });
-        })
-        .catch(err => {
-            res.status(500).json({
-                error: err
-            });
+        res.redirect('/Vcharts/?brand='+brand );        
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
         });
-        // Rev.aggregate([{
+    });
+    
+});
+
+module.exports = router;
+////let doc = await 
+
+// Rev.aggregate([{
         //             $match: {
         //                 product: model_no
         //             }
@@ -66,15 +64,3 @@ router.get("/", (req, res) => {
             //         error: err
             //     });
             // });
-
-    })
-    .catch(err => {
-        res.status(500).json({
-            error: err
-        });
-    });
-    
-});
-
-module.exports = router;
-////let doc = await 
