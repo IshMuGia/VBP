@@ -60,6 +60,35 @@ router.get("/Vcharts", (req, res) => {
     });
 });
 
+router.get("/Vcharts", (req, res) => {
+    Sol.find({
+        brand: req.query.brand
+    },'-_id')
+    .exec()
+    .then(results0 => {
+        Sol.find({},'brand -_id')
+        .exec()
+        .then(results1=>{
+            results1 = results1.slice(1);
+            const results = results0.concat(results1)
+            console.log(results);
+            res.render('powerbi', {
+                results: results
+            });
+        })
+        .catch(err => {
+            res.status(500).json({
+                error: err
+            });
+        });        
+    })
+    .catch(err => {
+        res.status(500).json({
+            error: err
+        });
+    });
+});
+
 router.get("/charts", (req, res) => {
     Sol.find({
         brand: "None"
