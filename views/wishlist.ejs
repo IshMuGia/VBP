@@ -86,26 +86,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% results.forEach(function(result) {%>
+                            <% results.forEach(function(results) {%>
                             <tr>
                                 <td class="text-center">
-                                    <a href="/removefromwishlist/?model_no=<%=result.model_no%>&email=<%=email%>"
+                                    <a href="/removefromwishlist/?brand=<%=results.brand%>"
                                         class="text-gray-32 font-size-26">×</a>
                                 </td>
                                 <td class="d-none d-md-table-cell">
-                                    <a href="/dproduct/?id=<%=result.model_no%>"><img class="img-fluid max-width-100 p-1" src="<%= result.img1 %>" alt="Image Description"></a>
+                                    <a href="/Vcharts/?brand=<%=results.brand%>"><img class="img-fluid max-width-100 p-1" src="<%= results.logo %>"></a>
                                 </td>
 
-                                <td data-title="Brand">
-                                    <a href="/dproduct/?id=<%=result.model_no%>"
-                                        class="text-gray-90"><%= result.brand %></a>
+                                <td data-title="Solution">
+                                    <a href="/Vcharts/?brand=<%=results.brand%>"
+                                        class="text-gray-90"><%= results.solution %></a>
                                 </td>
-                                <td data-title="Product">
-                                    <a href="/dproduct/?id=<%=result.model_no%>"
-                                        class="text-gray-90"><%= result.model_no %></a>
+                                <td data-title="Description">
+                                    <a href="/Vcharts/?brand=<%=results.brand%>"
+                                        class="text-gray-90"><%= results.s_desc %></a>
                                 </td>
-                                <td data-title="Unit Price">
-                                    <span class="">₹<%= result.mrp %></span>
+                                <td>
+                                    <a href="/" class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0">
+                                        <h6>
+                                            View Report<i class="float-right pt-1 ec ec-arrow-right-categproes font-size-20"></i></h6>
+                                    </a>
                                 </td>
                             </tr>
                             <% }); %>
