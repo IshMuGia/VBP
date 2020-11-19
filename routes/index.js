@@ -177,11 +177,12 @@ router.get("/wishlist", (req, res) => {
         }, 'brand -_id')
         .exec()
         .then(docs1 => {
-            Sol.find()
+            Sol.find({},'brand logo s_desc solution -_id')
                 .where('brand')
                 .in(docs1.map(i => i.brand))
                 .exec()
                 .then(records => {
+                    console.log(records);
                     res.render("wishlist", {
                         results: records
                     });
