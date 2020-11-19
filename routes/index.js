@@ -176,14 +176,14 @@ router.get("/addtowishlist", (req, res) => {
 });
 
 router.get("/removefromwishlist", (req, res) => {
-    var email = req.query.email;
-    var model_no = req.query.model_no;
+    var email = req.session.email;
+    var brand = req.query.brand;
     Wishlist.findOneAndRemove({
             email: email,
-            model_no: model_no
+            brand: brand
         }).then(results => {
-            res.redirect('/wishlist');
             console.log("Removed from Wishlist");
+            res.redirect('/wishlist');            
         })
         .catch(err => {
             res.status(500).json({
@@ -205,13 +205,11 @@ router.get("/wishlist", (req, res) => {
                 .exec()
                 .then(records => {
                     console.log(records);
-                    res.render("wishlist", {
+                    res.render("wishlist",{
                         results: records
                     });
-
                 })
                 .catch(err => {
-
                     res.status(500).json({
                         error: err
                     });
