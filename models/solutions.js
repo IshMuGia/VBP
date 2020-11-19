@@ -27,6 +27,11 @@ const SolSchema = new mongoose.Schema({
         required: true
 
     },
+    solution: {
+        type: String,
+        required: true
+
+    },
     logo: {
         type: String,
         required: true

@@ -3,13 +3,13 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Search = require('../models/Search');
 
-router.get("/", (req, res) => {
-    var email = req.query.email;
-    var word = req.query.word; {
+router.post("/", (req, res) => {
+    var email = req.session.email;
+    var word = req.body.word; {
         const newsearch = new Search({
             _id: new mongoose.Types.ObjectId(),
             word: word,
-            email: email,
+            email: email
         });
         console.log(newsearch)
         newsearch
