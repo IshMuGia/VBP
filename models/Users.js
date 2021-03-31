@@ -43,6 +43,10 @@ const UserSchema = new mongoose.Schema({
     biz_role: {
         type: String,
         required: true
+    },
+    biz_size: {
+        type: String,
+        required: true
     }
 });
 
