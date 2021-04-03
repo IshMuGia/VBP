@@ -46,8 +46,7 @@
                                     <li class="col"><a href="/wishlist" class="text-gray-90"
                                             data-toggle="tooltip" data-placement="top" title="Bookmarked"><i
                                                 class="font-size-18 fa fa-bookmark"></i></a></li>
-                                    <li class="col"><a href="/logout" class="text-gray-90" data-toggle="tooltip"
-                                            data-placement="top" title="Logout"><i
+                                    <li class="col"><a href="#addModal" class="text-gray-90" data-toggle="modal" ><i
                                                 class="font-size-20 fas fa-sign-out-alt"></i></a></li>
                                     <li><%=email%></li>
                                     <li><img src="/img/10.jpg" height="100" class="pr-2 pl-3 rounded-circle"></img></li>
@@ -314,7 +313,35 @@
                 <%}%>
             </div>
         </div>
+        <div id="addModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Don't forget to ask for a quote, baby!</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="two">
+                                <div class="form-group">
+        <h5>We hope you found what you were looking for!<br>
+        You can ask for a quote by emailing us at <b>"buyanalytics@gmail.com"</b><br><br>
+OR click the button below<br></h5>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Ask quote">
+                            <a role="button" href="/logout"  class="btn btn-danger" value="Quit">Quit</a>
 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- ========== END MAIN CONTENT ========== -->
 
         <!-- ========== FOOTER ========== -->
@@ -404,6 +431,7 @@
             </div>
             <!-- End Footer-copy-right -->
         </footer>
+        
         <!-- ========== END FOOTER ========== -->
 
         <!-- Go to Top -->
@@ -413,3 +441,7 @@
             <span class="fas fa-arrow-up u-go-to__inner"></span>
         </a>
         <!-- End Go to Top -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
