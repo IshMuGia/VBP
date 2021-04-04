@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const Act = require('../models/ActivityLog');
+const multer = require('multer');
 // Load User model
 const User = require('../models/Users');
 
@@ -13,11 +14,14 @@ router.post("/", (req, res) => {
     var email = req.body.email
     var bname = req.body.b_name
     var b_role = req.body.b_role
-    var b_add = req.body.b_add    
+    var b_add = req.body.b_add
+    var biz_size = req.body.size
     var password = req.body.password
+    var img = req.body.image
+    console.log(biz_size)
     User.findOne({ email: req.body.email })
-        .then(user => {
-            if (user) {
+    .then(user => {
+        if (user) {
                 const msg1 = "User already exists!";
                 const msg = "";
                 var rec = new Object();
@@ -36,6 +40,7 @@ router.post("/", (req, res) => {
                     biz_name: bname,
                     biz_role: b_role,
                     biz_add: b_add,
+                    biz_size: biz_size,
                     password: password
                 });
                 //console.log(newUser)
@@ -63,7 +68,7 @@ router.post("/", (req, res) => {
                                     login: currentDate
                                 });
                                 newLog
-                                    .save()
+                                    .save() 
                                     .then(r => {
                                         //console.log(user._id)
                                         return res.redirect('/charts');
