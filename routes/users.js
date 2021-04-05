@@ -29,10 +29,14 @@ router.post("/", (req, res) => {
     var biz_size = req.body.size
     var password = req.body.password
     var img = req.body.image
-    var message = '<p><span style="font-size: 17px;">Greetings <strong>' + name + '</strong>,</span></p><p>A new event has been created. Please fill your required details!</p><br><br><br>Regards,<br><strong>CSI-Management APP development team.</strong>'
+    var currentDate = new Date();
+    var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Your new Analytics Account has been created. Thank you for creating your account with us. With this account, you can browse through the website by viewing various solutions, bookmark and rate your favourite solutions. Finally request a value based price to get detailed insights on your customers to help your business grow.</p><br></p>To access your account, visit <a href= "http://3.93.242.13:5001/">Analytics</a></p></p><br>If you did not create an account, or if you have any questions, please email us at <a href="elex.BuyAnalytics@gmail.com"> elex.BuyAnalytics@gmail.com</a></p><br></p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br>Sincerely,<br><strong>Team Analytics</strong>'
+
+  //  'p><span style="font-<size: 17px;">Greetings <strong>' + name + '</strong>,</span></p><p>A new event has been created. Please fill your required details!</p><br><br><br>Regards,<br><strong>CSI-Management APP development team.</strong>'
 /*
 User.findOne({ email: req.body.email, biz_name: bname})
-.then(user => {if (user) {} else {} });
+.then(user => {if (user) {} else {} })
+.catch(err => console.log(err));      
 */
     User.findOne({ email: req.body.email/*, biz_name: bname*/})
     .then(user => {
@@ -58,7 +62,9 @@ User.findOne({ email: req.body.email, biz_name: bname})
                         biz_add: b_add,
                         biz_size: biz_size,
                         password: password,
-                        tier:"3"
+                        tier:"3",
+                        reg_date: currentDate,
+                        logins: "1"
                     });
                     //hash password
                     bcrypt.genSalt(10, (err, salt) => {
@@ -73,7 +79,6 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                     req.session.email = req.body.email
                                     req.session.password = req.body.password
                                     req.session.uid = user._id;
-                                    var currentDate = new Date();
                                     req.session.logdate = currentDate;
                                     //Create Log
                                     const newLog = new Act({
@@ -117,7 +122,9 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_add: b_add,
                                 biz_size: biz_size,
                                 password: password,
-                                tier:"1"
+                                tier:"1",
+                                reg_date: currentDate,
+                        logins: "1"
                             });
                             //hash password
                             bcrypt.genSalt(10, (err, salt) => {
@@ -132,7 +139,6 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                             req.session.email = req.body.email
                                             req.session.password = req.body.password
                                             req.session.uid = user._id;
-                                            var currentDate = new Date();
                                             req.session.logdate = currentDate;
                                             //Create Log
                                             const newLog = new Act({
@@ -171,7 +177,9 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_add: b_add,
                                 biz_size: biz_size,
                                 password: password,
-                                tier:"2"
+                                tier:"2",
+                                reg_date: currentDate,
+                        logins: "1"
                             });
                             //hash password
                             bcrypt.genSalt(10, (err, salt) => {
@@ -186,7 +194,6 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                             req.session.email = req.body.email
                                             req.session.password = req.body.password
                                             req.session.uid = user._id;
-                                            var currentDate = new Date();
                                             req.session.logdate = currentDate;
                                             //Create Log
                                             const newLog = new Act({

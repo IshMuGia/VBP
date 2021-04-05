@@ -1,0 +1,201 @@
+rank,biz_name,type
+1,Amazon,Global
+2,Alphabet,Global
+3,Facebook,Global
+4,JD.com,Global
+5,Alibaba,Global
+6,Tencent,Global
+7,Suning.com,Global
+8,Netflix,Global
+9,PayPal,Global
+10,ByteDance,Global
+11,Salesforce.com,Global
+12,Baidu,Global
+13,Booking,Global
+14,Otto Group,Global
+15,Uber,Global
+16,Meituan-Dianping,Global
+17,Adobe,Global
+18,Expedia,Global
+19,Rakuten,Global
+20,eBay,Global
+21,Bloomberg L.P.,Global
+22,Wayfair,Global
+23,NetEase,Global
+24,Zalando,Global
+25,Kuaishou,Global
+26,Spotify,Global
+27,Coupang,Global
+28,Flipkart,Global
+29,Wildberries,Global
+30,Naver,Global
+31,Epic Games,Global
+32,Trip.com,Global
+33,Chewy,Global
+34,Airbnb,Global
+35,Opendoor,Global
+36,Square,Global
+37,Pinduoduo,Global
+38,Sabre Corporation,Global
+39,Carvana,Global
+40,Bet365,Global
+41,Compass (company),Global
+42,Workday,Global
+43,Lyft,Global
+44,ServiceNow,Global
+45,Twitter,Global
+46,Stripe,Global
+47,ASOS.com,Global
+48,GoDaddy,Global
+49,DoorDash,Global
+50,Akamai Technologies,Global
+51,Yandex,Global
+52,Zillow,Global
+53,Kakao,Global
+54,Zoom Video,Global
+55,The Stars Group,Global
+56,Travelport,Global
+57,Coolblue,Global
+58,Wirecard,Global
+59,Fanatics,Global
+60,EPAM Systems,Global
+61,58.com,Global
+62,Groupon,Global
+63,Rocket Internet,Global
+64,Sea Limited,Global
+65,Sina Corp,Global
+66,B2W,Global
+67,Newegg,Global
+68,Match Group,Global
+69,Copart,Global
+70,Instacart,Global
+71,Shutterfly,Global
+72,Wish,Global
+73,Sohu,Global
+74,Snap,Global
+75,Rackspace,Global
+76,Dropbox,Global
+77,Shopify,Global
+78,Stitch Fix,Global
+79,TripAdvisor,Global
+80,"Kaplan, Inc.",Global
+81,Mail.Ru,Global
+82,Overstock,Global
+83,ANGI Homeservices Inc.,Global
+84,Delivery Hero,Global
+85,Zynga,Global
+86,LogMeIn,Global
+87,Grubhub,Global
+88,J2 Global,Global
+89,Verisign,Global
+90,Pinterest,Global
+91,Twilio,Global
+92,Endurance International Group,Global
+93,Ozon,Global
+94,Farfetch,Global
+95,Yelp,Global
+96,Vroom.com,Global
+97,Craigslist,Global
+98,DocuSign,Global
+99,Ultimate Software,Global
+100,Grab,Global
+1,ICREON,National
+2,MOBIKASA,National
+3,CODAL,National
+4,KELLTON TECH SOLUTIONS,National
+5,VALUECODERS,National
+6,MAGNETO IT SOLUTIONS,National
+7,EMIZEN TECH,National
+8,BRAINVIRE INFOTECH INC,National
+9,SOLVEDA,National
+10,COMMERCE PUNDIT,National
+11,IDS LOGIC,National
+12,DOTCOMWEAVERS,National
+13,ELSNER TECHNOLOGIES PVT LTD,National
+14,CSSCHOPPER,National
+15,NETHUES TECHNOLOGIES PVT. LTD.,National
+16,KRISH TECHNOLABS,National
+17,REDSTAGE,National
+18,CODILAR TECHNOLOGIES,National
+19,BORN TECHIES PRIVATE LIMITED,National
+20,MOBICOMMERCE,National
+21,BIZSPICE SEZC,National
+22,DYNAMIC DREAMZ,National
+23,MEETANSHI,National
+24,I95DEV,National
+25,BACANCY TECHNOLOGY,National
+26,TECH2GLOBE WEB SOLUTIONS LLP,National
+27,PLANET WEB SOLUTIONS PVT. LTD.,National
+28,ARON WEB SOLUTIONS,National
+29,THE BRIHASPATI INFOTECH PVT. LTD.,National
+30,SPARX IT SOLUTIONS,National
+31,PIXELCRAYONS,National
+32,WEB CRAYONS BIZ,National
+33,ZESTARD TECHNOLOGIES,National
+34,ATLAS SOFTWEB,National
+35,AUREATE LABS,National
+36,WEBCONTRIVE TECHNOLOGIES PVT LTD,National
+37,BYTES TECHNOLAB INC,National
+38,"NCODE TECHNOLOGIES, INC",National
+39,SOFTPULSE INFOTECH,National
+40,AHY CONSULTING,National
+41,DESIGN'N'BUY,National
+42,NEXTBITS,National
+43,DOLPHIN WEB SOLUTION,National
+44,VINSOL,National
+45,KRISHAWEB,National
+46,THE WORKSHORE,National
+47,VT NETZWELT,National
+48,TECH INNOVATIONS TECHNOLOGIES PVT LTD,National
+49,APPTOLOGY FZCO,National
+50,CUEBLOCKS,National
+51,ESTORE FACTORY,National
+52,TIS,National
+53,MAGECOMP,National
+54,MAX VISION SOLUTIONS,National
+55,LAPITS TECHNOLOGIES,National
+56,PROLITUS TECHNOLOGIES,National
+57,MAKEWEBBETTER,National
+58,WEBCRETA TECHNOLOGIES,National
+59,SANKHALA INFO SOLUTIONS,National
+60,MUTUAL MOBILE,National
+61,FATBIT TECHNOLOGIES,National
+62,PIXLOGIX,National
+63,ROCK TECHNOLABS,National
+64,SINGSYS,National
+65,COPPER MOBILE,National
+66,TECHGRAINS TECHNOLOGIES,National
+67,BIZ4GROUP LLC,National
+68,"CHETU, INC.",National
+69,LEMOLITE TECHNOLOGIES LLP,National
+70,OSC PROFESSIONALS PVT LTD,National
+71,OORJIT,National
+72,M-CONNECT SOLUTIONS,National
+73,PROTOCLOUD TECHNOLOGIES PVT. LTD.,National
+74,SYNERGYTOP,National
+75,LOYAL WEB SOLUTIONS,National
+76,NECTARBITS,National
+77,TATVASOFT,National
+78,LUCENT INNOVATION,National
+79,EVINCE DEVELOPMENT,National
+80,SRIJAN TECHNOLOGIES PVT. LTD.,National
+81,ORANGEMANTRA,National
+82,HEXAMARVEL TECHNOLOGIES PRIVATE LIMITED,National
+83,BYTEGROW TECHNOLOGIES,National
+84,JOBIN AND JISMI IT SERVICES LLP,National
+85,MANGO IT SOLUTIONS,National
+86,ELIGHTWALK TECHNOLOGY,National
+87,SOURCEMASH TECHNOLOGIES,National
+88,DELAPLEX,National
+89,LOGICRAYS TECHNOLOGIES PVT. LTD.,National
+90,EBIZNEEDS,National
+91,JERONONE TECHNOLOGIES PVT LTD,National
+92,WEBANDCRAFTS,National
+93,SURIA INTERNATIONAL SERVICES PTE. LTD.,National
+94,ELINSYS,National
+95,NETSMARTZ LLC,National
+96,THE FABCODE IT SOLUTIONS LLP,National
+97,SUN DEW SOLUTIONS PRIVATE LIMITED,National
+98,ATHARVA SYSTEM,National
+99,ALLIN INFO SYSTEMS PVT. LTD.,National
+100,ADORNCOMMERCE LLP,National

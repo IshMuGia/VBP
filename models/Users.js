@@ -14,7 +14,6 @@ const UserSchema = new mongoose.Schema({
     phone: {
         type: Number,
         required: true
-
     },
     email: {
         type: String,
@@ -38,7 +37,6 @@ const UserSchema = new mongoose.Schema({
     biz_add: {
         type: String,
         required: true
-
     },
     biz_role: {
         type: String,
@@ -49,7 +47,16 @@ const UserSchema = new mongoose.Schema({
         required: true
     },
     biz_tier: {
-        type: String
+        type: Number,
+        required: true
+    },
+    reg_date: {
+        type: Date,
+        required: true
+    },
+    logins: {
+        type: Number,
+        required: true
     }
 });
 
