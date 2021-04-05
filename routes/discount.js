@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 
             console.log(user);
             var name = user.name;
-            var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Thank you for your inquiry regarding our service. We are pleased to satisfy your request with the attached document below.</p><p>In case you would like to get more information, we are happy to arrange a call and a meeting for our further discussion on this matter. We look forward to hearing from you.<br><br><p>For further queries email us at <a href="elex.BuyAnalytics@gmail.com">elex.BuyAnalytics@gmail.com</a></p></p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
+            var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p> <p>Thank you so much for being a loyal customer! <p>To show our appreciation, we are pleased to offer you a discount on any of the solutions given on our website before the end of the year.<br><p>To claim this offer, just hit reply to this email requesting value based price of any solution and we will take 30% off when we send the final invoice.<br><p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
             var currentDate = new Date();
             const newLog = new Quote({
                 email: email,
