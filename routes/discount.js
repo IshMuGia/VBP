@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 
             console.log(user);
             var name = user.name;
-            var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p> <p>Thank you so much for being a loyal customer! <p>To show our appreciation, we are pleased to offer you a discount on any of the solutions given on our website before the end of the year.<br><p>To claim this offer, just hit reply to this email requesting value based price of any solution and we will take 30% off when we send the final invoice.<br><p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
+            var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p> <p>Thank you so much for being a loyal customer! <p>To show our appreciation, we are pleased to offer you a discount on any of the solutions given on our website before the end of the year.<br><p>To claim this offer, just hit reply to this email requesting value based price of any solution and we will take <strong>30%</strong> off when we send the final invoice.<br><p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
             var currentDate = new Date();
             const newLog = new Quote({
                 email: email,
@@ -34,7 +34,7 @@ router.get("/", (req, res) => {
                 var mailOptions = {
                     from: 'mushira.shaikh1999@gmail.com',
                     to: email,
-                    subject: 'Analytics | VBP inquiry:'/* + sol_name*/,
+                    subject: 'Analytics | Special discount offer!! GRAB QUICKLY!'/* + sol_name*/,
                     html: message
                         //text: "Hello There!!!!! An event has been created pls fill your respective details"
                 }
