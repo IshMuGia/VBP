@@ -90,32 +90,37 @@ router.get("/powerbi", (req, res) => {
 });
 
 router.get("/charts", (req, res) => {
-    Sol.find({
-        brand: "None"
-    })
-    .exec()
-    .then(results0 => {
-        Sol.find({},'brand -_id')
+    if (req.session.email) {
+        Sol.find({
+            brand: "None"
+        })
         .exec()
-        .then(results1=>{
-            results1 = results1.slice(1);
-            const results = results0.concat(results1)
-            console.log(results);
-            res.render('charts', {
-                results: results
-            });
+        .then(results0 => {
+            Sol.find({},'brand -_id')
+            .exec()
+            .then(results1=>{
+                results1 = results1.slice(1);
+                const results = results0.concat(results1)
+                console.log(results);
+                res.render('charts', {
+                    results: results
+                });
+            })
+            .catch(err => {
+                res.status(500).json({
+                    error: err
+                });
+            });  
         })
         .catch(err => {
             res.status(500).json({
                 error: err
             });
-        });  
-    })
-    .catch(err => {
-        res.status(500).json({
-            error: err
         });
-    });
+    } else {
+        res.redirect("/myaccount");
+    }
+    
 });
 
 router.get('/logout', (req, res) => {
