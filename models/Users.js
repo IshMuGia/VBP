@@ -47,6 +47,9 @@ const UserSchema = new mongoose.Schema({
     biz_size: {
         type: String,
         required: true
+    },
+    biz_tier: {
+        type: String
     }
 });
 
