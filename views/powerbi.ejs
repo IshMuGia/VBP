@@ -46,11 +46,10 @@
                                     <li class="col"><a href="/wishlist" class="text-gray-90"
                                             data-toggle="tooltip" data-placement="top" title="Bookmarked"><i
                                                 class="font-size-18 fa fa-bookmark"></i></a></li>
-                                    <li class="col"><a href="/logout" class="text-gray-90" data-toggle="tooltip"
-                                            data-placement="top" title="Logout"><i
-                                                class="font-size-20 fas fa-sign-out-alt"></i></a></li>
+                                                <li class="col"><a href="#addModal" class="text-gray-90" data-toggle="modal" ><i
+                                                    class="font-size-20 fas fa-sign-out-alt"></i></a></li>
                                     <li><%=email%></li>
-                                    <li><img src="/img/10.jpg" height="100" class="pr-2 pl-3 rounded-circle"></img></li>
+                                    <li><img src="/img/a" height="100" class="pr-2 pl-3 rounded-circle"></img></li>
                                 </ul>
                             </div>
                         </div>
@@ -102,7 +101,7 @@
 
                         <!-- End Search Bar -->
                         <br><br>
-
+<h5>
                         <!-- List -->
                         <ul id="headerSidebarList" class="u-header-collapse__nav">
                             <!-- Home Section -->
@@ -249,6 +248,7 @@
                             </li>
                         </ul>
                         <!-- End List -->
+                    </h5>
                     </div>
                 </div>
                 <!-- End Content -->
@@ -294,6 +294,9 @@
             </div>
             <div class="col bg-dark " id="main">
                 <a href="#" class="d-block">
+                    <br>
+
+                    <h3 class="text-warning"><b>Solution:</b> </h3>
                     <img class="img-fluid pt-6" src="<%= results[0].logo%>">
                 </a>
                 <h3 class="text-center text-primary">
@@ -305,7 +308,35 @@
                 </h5>
             </div>
         </div>
+        <div id="addModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Don't forget to ask for a quote!</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="two">
+                                <div class="form-group">
+        <h5>We hope you found what you were looking for!<br>
+        You can ask for a quote by emailing us at <b>"buyanalytics@gmail.com"</b><br><br>
+OR click the button below<br></h5>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <a role="button" href="/quote" class="btn btn-success" value="Ask quote">Ask Quote</a>
+                            <a role="button" href="/discount"  class="btn btn-danger" value="Quit">Quit</a>
 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- ========== END MAIN CONTENT ========== -->
 
         <!-- ========== FOOTER ========== -->
@@ -316,7 +347,7 @@
                 <div class="container">
                     <a href="/" class="btn btn-sm btn-block btn-warning btn-wide transition-3d-hover mb-4 pt-2 pb-0">
                         <h4>
-                            <i class="ec ec-compare mr-2 font-size-25"></i> Request VBP</h4>
+                            <i class="ec ec-compare mr-2 font-size-25"></i> Request Quotation</h4>
                     </a>
 
                     <div class="row">
@@ -340,7 +371,7 @@
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <h5 class="text-black"> <b>Request VBP <a href="mailto:elex.BuyAnalytics@gmail.com"
+                            <h5 class="text-black"> <b>Request Quotation <a href="mailto:elex.BuyAnalytics@gmail.com"
                                         class="text-black"> <br>elex.BuyAnalytics@gmail.com<br>
                                         Phone no.: <tel>9967937644</tel></a><br><br></b></h5>
                             <div class="row">
