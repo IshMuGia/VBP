@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
     var password = req.body.password
     var img = req.body.image
     var currentDate = new Date();
-    var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Your new Analytics Account has been created. Thank you for creating your account with us. With this account, you can browse through the website by viewing various solutions, bookmark and rate your favourite solutions. Finally request a value based price to get detailed insights on your customers to help your business grow.</p><br></p>To access your account, visit <a href= "http://3.93.242.13:5001/">Analytics</a></p></p><br>If you did not create an account, or if you have any questions, please email us at <a href="elex.BuyAnalytics@gmail.com"> elex.BuyAnalytics@gmail.com</a></p><br></p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br>Sincerely,<br><strong>Team Analytics</strong>'
+    var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Your new Analytics Account has been created. Thank you for creating your account with us. With this account, you can browse through the website by viewing various solutions, bookmark, and rate your favorite solutions. Finally request a value-based price to get detailed insights on your customers to help your business grow.</p><p><br />To&nbsp;activate your account,&nbsp;click&nbsp;<a href="http://3.93.242.13:5001/">Analytics</a>.<br />If you did not create an account, or if you have any questions, please email us at <a href="elex.BuyAnalytics@gmail.com"> elex.BuyAnalytics@gmail.com</a><br /><br />Sincerely,<br /><strong>Team Analytics</strong></p>'
     var msg1, msg, rec
     rec = new Object();
   //  'p><span style="font-<size: 17px;">Greetings <strong>' + name + '</strong>,</span></p><p>A new event has been created. Please fill your required details!</p><br><br><br>Regards,<br><strong>CSI-Management APP development team.</strong>'
@@ -98,7 +98,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                             var mailOptions = {
                                                 from: 'mushira.shaikh1999@gmail.com',
                                                 to: email,
-                                                subject: 'Welcome to Analytics! – Thanks for joining us',
+                                                subject: 'Welcome to Analytics! Activation Mail',
                                                 html: message
                                                     //text: "Hello There!!!!! An event has been created pls fill your respective details"
                                             }
@@ -163,7 +163,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                                     var mailOptions = {
                                                         from: 'mushira.shaikh1999@gmail.com',
                                                         to: email,
-                                                        subject: 'Welcome to Analytics! – Thanks for joining us',
+                                                        subject: 'Welcome to Analytics! Activation Mail',
                                                         html: message
                                                             //text: "Hello There!!!!! An event has been created pls fill your respective details"
                                                     }
@@ -224,7 +224,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                                     var mailOptions = {
                                                         from: 'mushira.shaikh1999@gmail.com',
                                                         to: email,
-                                                        subject: 'Welcome to Analytics! – Thanks for joining us',
+                                                        subject: 'Welcome to Analytics! Activation Mail',
                                                         html: message
                                                             //text: "Hello There!!!!! An event has been created pls fill your respective details"
                                                     }
