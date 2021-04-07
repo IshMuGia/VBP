@@ -31,27 +31,34 @@ router.post("/", (req, res) => {
     var img = req.body.image
     var currentDate = new Date();
     var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Your new Analytics Account has been created. Thank you for creating your account with us. With this account, you can browse through the website by viewing various solutions, bookmark and rate your favourite solutions. Finally request a value based price to get detailed insights on your customers to help your business grow.</p><br></p>To access your account, visit <a href= "http://3.93.242.13:5001/">Analytics</a></p></p><br>If you did not create an account, or if you have any questions, please email us at <a href="elex.BuyAnalytics@gmail.com"> elex.BuyAnalytics@gmail.com</a></p><br></p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br>Sincerely,<br><strong>Team Analytics</strong>'
-
+    var msg1, msg, rec
+    rec = new Object();
   //  'p><span style="font-<size: 17px;">Greetings <strong>' + name + '</strong>,</span></p><p>A new event has been created. Please fill your required details!</p><br><br><br>Regards,<br><strong>CSI-Management APP development team.</strong>'
 /*
 User.findOne({ email: req.body.email, biz_name: bname})
 .then(user => {if (user) {} else {} })
 .catch(err => console.log(err));      
-*/
-    User.findOne({ email: req.body.email/*, biz_name: bname*/})
-    .then(user => {
+*/  if(password.length < 8){
+        msg1 = "Password length should be minimum 8 character";
+        msg = "";
+        rec.msg1 = msg1;
+        rec.msg = msg;
+        res.render('myaccount', { rec: rec });
+        console.log("Pass Length");
+    }
+    else{ 
+        User.findOne({email: req.body.email})
+        .then(user => {
         if (user) {
-                const msg1 = "User Or Business already exists!";
-                const msg = "";
-                var rec = new Object();
+                msg1 = "User Or Business already exists!";
+                msg = "";
                 rec.msg1 = msg1;
                 rec.msg = msg;
                 res.render('myaccount', { rec: rec });
-
                 console.log("email exists");
-            } else {
-                if (biz_size=="Small" || biz_size=="Medium")
-                {
+            }else{
+                    if (biz_size=="Small" || biz_size=="Medium")
+                    {
                     const newUser = new User({
                         _id: new mongoose.Types.ObjectId(),
                         name: name,
@@ -62,7 +69,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                         biz_add: b_add,
                         biz_size: biz_size,
                         password: password,
-                        tier:"3",
+                        biz_tier:"3",
                         reg_date: currentDate,
                         logins: "1"
                     });
@@ -99,8 +106,13 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                                 if (error) {
                                                     console.log(error);
                                                     // res.sendStatus(400);
-                                                } else
-                                                    return res.redirect('/charts');
+                                                } else{
+                                                    msg1 = "Activation Mail has been sent, Please Check your inbox!";
+                                                    msg = "";
+                                                    rec.msg1 = msg1;
+                                                    rec.msg = msg;
+                                                    res.render('myaccount', { rec: rec });
+                                                }
                                             });
                                             
                                         });
@@ -122,7 +134,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_add: b_add,
                                 biz_size: biz_size,
                                 password: password,
-                                tier:"1",
+                                biz_tier:"1",
                                 reg_date: currentDate,
                         logins: "1"
                             });
@@ -160,7 +172,13 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                                             console.log(error);
                                                             // res.sendStatus(400);
                                                         } else
-                                                            return res.redirect('/charts');
+                                                        {
+                                                            msg1 = "Activation Mail has been sent, Please Check your inbox!";
+                                                            msg = "";
+                                                            rec.msg1 = msg1;
+                                                            rec.msg = msg;
+                                                            res.render('myaccount', { rec: rec });
+                                                        }
                                                     });
                                                 });
                                         })
@@ -177,7 +195,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_add: b_add,
                                 biz_size: biz_size,
                                 password: password,
-                                tier:"2",
+                                biz_tier:"2",
                                 reg_date: currentDate,
                         logins: "1"
                             });
@@ -215,7 +233,13 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                                             console.log(error);
                                                             // res.sendStatus(400);
                                                         } else
-                                                            return res.redirect('/charts');
+                                                        {
+                                                            msg1 = "Activation Mail has been sent, Please Check your inbox!";
+                                                            msg = "";
+                                                            rec.msg1 = msg1;
+                                                            rec.msg = msg;
+                                                            res.render('myaccount', { rec: rec });
+                                                        }
                                                     });
                                                 });
                                         })
@@ -228,6 +252,6 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                
             }
         });
-
+    }
 });
 module.exports = router;
