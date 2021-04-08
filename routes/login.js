@@ -16,17 +16,19 @@ router.post("/", (req, res) => {
         })
         .then(user => {
 
-            //if user not exist than return status 400
-            //console.log("User not exist");
-            const msg = "User not exist";
-            const msg1 = "";
-            var rec = new Object();
-            rec.msg1 = msg1;
-            rec.msg = msg;
-
-            if (!user) return res.render('myaccount', {
-                rec: rec
-            });;
+            if (!user) {
+                //if user not exist than return status 400
+                //console.log("User not exist");
+                const msg = "User not exist";
+                const msg1 = "";
+                var rec = new Object();
+                rec.msg1 = msg1;
+                rec.msg = msg;
+                return res.render('myaccount', {
+                    rec: rec
+                });
+            }
+            
             //if user exist than compare password
             //password comes from the user
             //user.password comes from the database
@@ -38,11 +40,8 @@ router.post("/", (req, res) => {
                     req.session.email = email
                     req.session.password = password
                     req.session.uid = user._id;
-                    //const m = "Save Product";
-                    //req.session.alert = m
                     var currentDate = new Date();
                     req.session.logdate = currentDate;
-                    //console.log(req.session.logdate);
                     console.log("Login success");
                     const newLog = new Act({
                         email: req.session.email,
@@ -52,10 +51,26 @@ router.post("/", (req, res) => {
                         .save()
                         .then(r => {
                             console.log(user._id)
-                            return res.redirect('/charts');
+                            up_logins=Number(user.logins)+1
+                            var myquery = {
+                                email: req.session.email
+                            };
+                            var newvalues = {
+                                $set: {
+                                    logins: up_logins
+                                }
+                            };
+                            Act.findOneAndUpdate(myquery, newvalues, {new: true})
+                                .then(result => {
+                                    console.log(result)
+                                    return res.redirect('/charts');
+                                })
+                                .catch(err => {
+                                    res.status(500).json({
+                                        error: err
+                                    });
+                                });
                         })
-                        //return res.redirect('/?uid=' + r._id);
-
                         .catch(err => console.log(err));
 
                 } else {
@@ -64,7 +79,6 @@ router.post("/", (req, res) => {
                     var rec = new Object();
                     rec.msg1 = msg1;
                     rec.msg = msg;
-
                     return res.render('myaccount', {
                         rec: rec
                     });

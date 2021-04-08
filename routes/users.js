@@ -70,7 +70,6 @@ User.findOne({ email: req.body.email, biz_name: bname})
                         biz_size: biz_size,
                         password: password,
                         biz_tier:"3",
-                        reg_date: currentDate,
                         logins: "1"
                     });
                     //hash password
@@ -135,8 +134,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_size: biz_size,
                                 password: password,
                                 biz_tier:"1",
-                                reg_date: currentDate,
-                        logins: "1"
+                                logins: "1"
                             });
                             //hash password
                             bcrypt.genSalt(10, (err, salt) => {
@@ -196,8 +194,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                 biz_size: biz_size,
                                 password: password,
                                 biz_tier:"2",
-                                reg_date: currentDate,
-                        logins: "1"
+                                logins: "1"
                             });
                             //hash password
                             bcrypt.genSalt(10, (err, salt) => {

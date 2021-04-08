@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
         required: true
 
     },
-    timestamp: { 
+    reg_date: { 
         type: Date, 
         default: Date.now
     },
@@ -48,10 +48,6 @@ const UserSchema = new mongoose.Schema({
     },
     biz_tier: {
         type: Number,
-        required: true
-    },
-    reg_date: {
-        type: Date,
         required: true
     },
     logins: {
