@@ -138,8 +138,7 @@ router.get('/logout', (req, res) => {
             logout: currentDate, duration: duration
         }
     };
-    Act.findOneAndUpdate(myquery, newvalues, {new: true}
-        )
+    Act.findOneAndUpdate(myquery, newvalues, {new: true, sort: { 'login': -1 }})
         .then(result => {
             console.log(result)
             req.session.destroy((err) => {
