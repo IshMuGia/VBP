@@ -24,6 +24,7 @@ router.get("/", (req, res) => {
             var name = user.name;
 
             //create quote.pdf
+            
             const a= new pdfkit
 			a.pipe(fs.createWriteStream("report/".concat(result[0].name).concat(".pdf")));
 			a.fontSize(15).text("Don Bosco Institute of Technology, Kurla(W)",{align: 'center'})
