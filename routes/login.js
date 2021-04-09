@@ -5,12 +5,11 @@ const bcrypt = require('bcryptjs');
 const User = require('../models/Users');
 const Act = require('../models/ActivityLog');
 
+
 //Login handle
 router.post("/", (req, res) => {
     var email = req.body.email
     var password = req.body.password
-
-    console.log(req.body);
     User.findOne({
             email
         })
@@ -42,6 +41,7 @@ router.post("/", (req, res) => {
                     req.session.uid = user._id;
                     var currentDate = new Date();
                     req.session.logdate = currentDate;
+                    
                     console.log("Login success");
                     const newLog = new Act({
                         email: req.session.email,
@@ -50,8 +50,8 @@ router.post("/", (req, res) => {
                     newLog
                         .save()
                         .then(r => {
-                            console.log(user._id)
                             up_logins=Number(user.logins)+1
+                            console.log(up_logins)
                             var myquery = {
                                 email: req.session.email
                             };
@@ -60,7 +60,7 @@ router.post("/", (req, res) => {
                                     logins: up_logins
                                 }
                             };
-                            Act.findOneAndUpdate(myquery, newvalues, {new: true})
+                            User.findOneAndUpdate(myquery, newvalues, {new: true})
                                 .then(result => {
                                     console.log(result)
                                     return res.redirect('/charts');
