@@ -66,7 +66,11 @@ router.get("/", (req, res) => {
                 from: 'mushira.shaikh1999@gmail.com',
                 to: email,
                 subject: 'Analytics | Special discount offer!! GRAB QUICKLY!'/* + sol_name*/,
-                html: message
+                html: message,                
+                attachments:[{
+                    filename: 'sample.pdf',
+                    path: __dirname + '/sample.pdf' 
+                }]
             }
             transporter.sendMail(mailOptions, function(error, info) {
                 if (error) {

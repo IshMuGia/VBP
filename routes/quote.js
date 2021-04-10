@@ -25,35 +25,35 @@ router.get("/", (req, res) => {
 
             //create quote.pdf
             
-            const a= new pdfkit
-			a.pipe(fs.createWriteStream("report/".concat(result[0].name).concat(".pdf")));
-			a.fontSize(15).text("Don Bosco Institute of Technology, Kurla(W)",{align: 'center'})
-			a.text("Department of Information Technology",{align: 'center'})
-			a.moveDown(2);
-			a.font('Helvetica-Bold').fontSize(30).text(result[0].name,{align: 'center'})
-			a.moveDown();
-			a.font('Helvetica-Bold').fontSize(15).text('Name: ', {continued:true}).font('Helvetica').text (result[0].name)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Theme: ', {continued:true}).font('Helvetica').text (result[0].theme)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Description: ', {continued:true}).font('Helvetica').text (result[0].description)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Event Date: ', {continued:true}).font('Helvetica').text (result[0].event_date)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Venue: ', {continued:true}).font('Helvetica').text (result[0].venue)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Speaker: ', {continued:true}).font('Helvetica').text (result[0].speaker)
-			a.moveDown();
-			a.font('Helvetica-Bold').text('Finance Summary ')
-			a.font('Helvetica').text('Registration fee for CSI members: ',{continued:true}).font('Helvetica').text (result[0].reg_fee_c)
-			a.moveDown(2);
-			a.text('Registration fee for Non-CSI members: ', {continued:true}).font('Helvetica').text (result[0].reg_fee_nc)
-			a.moveDown(2);
-			a.font('Helvetica-Bold').text('Prize: ', {continued:true}).font('Helvetica').text (result[0].prize)
-			a.moveDown();
-            a.end()
-            var file = 'report/'.concat(result[0].name).concat('.pdf');
-			var data=fs.readFileSync(file);
+            // const a= new pdfkit
+			// a.pipe(fs.createWriteStream("report/".concat(result[0].name).concat(".pdf")));
+			// a.fontSize(15).text("Don Bosco Institute of Technology, Kurla(W)",{align: 'center'})
+			// a.text("Department of Information Technology",{align: 'center'})
+			// a.moveDown(2);
+			// a.font('Helvetica-Bold').fontSize(30).text(result[0].name,{align: 'center'})
+			// a.moveDown();
+			// a.font('Helvetica-Bold').fontSize(15).text('Name: ', {continued:true}).font('Helvetica').text (result[0].name)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Theme: ', {continued:true}).font('Helvetica').text (result[0].theme)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Description: ', {continued:true}).font('Helvetica').text (result[0].description)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Event Date: ', {continued:true}).font('Helvetica').text (result[0].event_date)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Venue: ', {continued:true}).font('Helvetica').text (result[0].venue)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Speaker: ', {continued:true}).font('Helvetica').text (result[0].speaker)
+			// a.moveDown();
+			// a.font('Helvetica-Bold').text('Finance Summary ')
+			// a.font('Helvetica').text('Registration fee for CSI members: ',{continued:true}).font('Helvetica').text (result[0].reg_fee_c)
+			// a.moveDown(2);
+			// a.text('Registration fee for Non-CSI members: ', {continued:true}).font('Helvetica').text (result[0].reg_fee_nc)
+			// a.moveDown(2);
+			// a.font('Helvetica-Bold').text('Prize: ', {continued:true}).font('Helvetica').text (result[0].prize)
+			// a.moveDown();
+            // a.end()
+            // var file = 'report/'.concat(result[0].name).concat('.pdf');
+			// var data=fs.readFileSync(file);
 
 
             var message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p><p>Thank you for your inquiry regarding our service. We are pleased to satisfy your request with the attached document below.</p><p>In case you would like to get more information, we are happy to arrange a call and a meeting for our further discussion on this matter. We look forward to hearing from you.<br><br><p>For further queries email us at <a href="elex.BuyAnalytics@gmail.com">elex.BuyAnalytics@gmail.com</a></p></p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
@@ -65,6 +65,7 @@ router.get("/", (req, res) => {
             newLog
             .save()
             .then(r => {
+                console.log(__dirname);
                 var mailOptions = {
                     from: 'mushira.shaikh1999@gmail.com',
                     to: email,
@@ -72,7 +73,7 @@ router.get("/", (req, res) => {
                     html: message,
                     attachments:[{
                         filename: 'quote.pdf',
-                        path: '../public/quotes'
+                        path: __dirname + '/quote.pdf' 
                     }]
                         //text: "Hello There!!!!! An event has been created pls fill your respective details"
                 }
@@ -81,7 +82,10 @@ router.get("/", (req, res) => {
                         console.log(error);
                         // res.sendStatus(400);
                     } else
-                        return res.redirect('/logout');
+                       { 
+                           console.log("Mail sent Quote");
+                           return res.redirect('/logout');
+                    }
                 });
                 
             })

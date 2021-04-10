@@ -51,7 +51,7 @@ router.post("/", (req, res) => {
                         .save()
                         .then(r => {
                             up_logins=Number(user.logins)+1
-                            console.log(up_logins)
+                            // console.log(up_logins)
                             var myquery = {
                                 email: req.session.email
                             };
@@ -62,7 +62,7 @@ router.post("/", (req, res) => {
                             };
                             User.findOneAndUpdate(myquery, newvalues, {new: true})
                                 .then(result => {
-                                    console.log(result)
+                                    // console.log(result)
                                     return res.redirect('/charts');
                                 })
                                 .catch(err => {

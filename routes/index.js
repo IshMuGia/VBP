@@ -101,7 +101,7 @@ router.get("/charts", (req, res) => {
             .then(results1=>{
                 results1 = results1.slice(1);
                 const results = results0.concat(results1)
-                console.log(results);
+                // console.log(results);
                 res.render('charts', {
                     results: results
                 });
