@@ -8,8 +8,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "mushira.shaikh1999@gmail.com",
-        pass: "Mushi_google99"
+        user: "elex.buyanalytics@gmail.com",
+        pass: "Elexanalytic098"
     }
 });
 
@@ -63,7 +63,7 @@ router.get("/", (req, res) => {
             
             message = '<p><span style="font-size: 17px;"> Dear <strong>' + name + '</strong>,</span></p> <p>Thank you so much for being a loyal customer! <p>To show our appreciation, we are pleased to offer you a discount on any of the solutions given on our website before the end of the year.<br><p>To claim this offer, just hit reply to this email requesting value based price of any solution and we will take '+per+'% off when we send the final invoice.<br><p>For more information about our services visit <a href= "http://3.93.242.13:5001/">Analytics</a><br><br><br>Sincerely,<br><strong>Team Analytics</strong>'
             var mailOptions = {
-                from: 'mushira.shaikh1999@gmail.com',
+                from: 'elex.buyanalytics@gmail.com',
                 to: email,
                 subject: 'Analytics | Special discount offer!! GRAB QUICKLY!'/* + sol_name*/,
                 html: message,                

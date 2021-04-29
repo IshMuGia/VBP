@@ -13,8 +13,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "mushira.shaikh1999@gmail.com",
-        pass: "Mushi_google99"
+        user: "elex.buyanalytics@gmail.com",
+        pass: "Elexanalytic098"
     }
 });
 
@@ -95,7 +95,7 @@ User.findOne({ email: req.body.email, biz_name: bname})
                                         .save() 
                                         .then(r => {
                                             var mailOptions = {
-                                                from: 'mushira.shaikh1999@gmail.com',
+                                                from: 'elex.buyanalytics@gmail.com',
                                                 to: email,
                                                 subject: 'Welcome to Analytics! Activation Mail',
                                                 html: message
